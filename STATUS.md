@@ -15,4 +15,5 @@ Maintainer dashboard. One row per chapter file. Update this row in the same comm
 | 06-first-skill | 2026-05       | v2.x                | partial (structure verified; live trigger pending) | Ships M4 v1 artifact + verify script |
 | 07-multi-file-skills | 2026-05 | v2.x                | partial (structure verified; live trigger pending) | Ships M4 v2 artifact (SKILL.md + principles.md) |
 | 08-skill-creator | 2026-05     | v2.x                | n/a (concept + checklist) | /skill-creator walkthrough + before/after description tuning + debug checklist |
+| 09-exercises | 2026-05         | v2.x                | partial (reference skills structure-verified) | Three exercises + reference SKILL.md answers under tutorial/skills/exercises/ |
 | 10-next-steps | 2026-05        | v2.x                | n/a (no commands) | Curated outbound links only |
