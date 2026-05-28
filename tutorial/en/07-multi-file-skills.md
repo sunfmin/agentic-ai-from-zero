@@ -107,4 +107,4 @@ Don't refactor until you've felt the friction of *not* refactoring. v1 is fine. 
 
 ## Next
 
-Chapter 8 — *Using skill-creator*. Instead of writing a `SKILL.md` by hand, you'll describe a new skill in plain prose and watch `/skill-creator` produce the file shape for you. You'll also learn how to fix descriptions that don't trigger reliably.
+[Chapter 8 — *Using skill-creator*](./08-skill-creator.md). Instead of writing a `SKILL.md` by hand, you'll describe a new skill in plain prose and watch `/skill-creator` produce the file shape for you. You'll also learn how to fix descriptions that don't trigger reliably.

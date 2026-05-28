@@ -114,4 +114,4 @@ Claude Code 要跟 Anthropic 的服务器对话才能干事。它得知道哪个
 
 ## 下一章
 
-第 3 章 —— *你的第一次对话*。你会建一个空文件夹、`cd` 进去、跑 `claude`，然后进行真正的第一次对话 —— Claude 读你写的一个文件、Claude 帮你写一个新文件、Claude 跑一条命令。
+[第 3 章 —— *你的第一次对话*](./03-first-session.md)。你会建一个空文件夹、`cd` 进去、跑 `claude`，然后进行真正的第一次对话 —— Claude 读你写的一个文件、Claude 帮你写一个新文件、Claude 跑一条命令。

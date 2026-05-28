@@ -65,4 +65,4 @@ For each one:
 
 ## Next
 
-Chapter 10 — *Where to Go Next*. Curated outbound links for what to learn after this book. No new concepts; pure off-ramp.
+[Chapter 10 — *Where to Go Next*](./10-next-steps.md). Curated outbound links for what to learn after this book. No new concepts; pure off-ramp.

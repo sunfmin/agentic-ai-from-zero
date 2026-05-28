@@ -70,4 +70,4 @@ A `CLAUDE.md` is the lightest possible form of customisation. The next step up �
 
 ## Next
 
-Chapter 5 — *What's a Skill*. `CLAUDE.md` is one piece of customisation; a **skill** is the other. You'll learn what makes them different and why you'd want both.
+[Chapter 5 — *What's a Skill*](./05-whats-a-skill.md). `CLAUDE.md` is one piece of customisation; a **skill** is the other. You'll learn what makes them different and why you'd want both.

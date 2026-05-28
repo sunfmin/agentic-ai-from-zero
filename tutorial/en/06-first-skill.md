@@ -128,4 +128,4 @@ If the structure looks right but the skill still doesn't trigger on phrases like
 
 ## Next
 
-Chapter 7 — *Multi-File Skills*. You'll take the `SKILL.md` you just wrote and refactor it into multiple files using progressive disclosure. The skill will do the same thing — but its insides will look very different.
+[Chapter 7 — *Multi-File Skills*](./07-multi-file-skills.md). You'll take the `SKILL.md` you just wrote and refactor it into multiple files using progressive disclosure. The skill will do the same thing — but its insides will look very different.

@@ -110,4 +110,4 @@ These five are everything you need from the terminal for the rest of this book. 
 
 ## Next
 
-Chapter 2 — *Set Up Your Toolbox*. You'll install Homebrew, Node.js, and Claude Code itself. The five commands above are how you'll navigate to the right place to do it.
+[Chapter 2 — *Set Up Your Toolbox*](./02-toolbox.md). You'll install Homebrew, Node.js, and Claude Code itself. The five commands above are how you'll navigate to the right place to do it.

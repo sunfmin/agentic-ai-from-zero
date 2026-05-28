@@ -112,4 +112,4 @@ You used all three in this chapter without being told what they were called. Tha
 
 ## Next
 
-Chapter 4 — *Teaching Claude Your Project*. You'll bring a small project (a writing folder) into Claude Code and write a `CLAUDE.md` for it — the one file that *does* persist across sessions.
+[Chapter 4 — *Teaching Claude Your Project*](./04-running-project.md). You'll bring a small project (a writing folder) into Claude Code and write a `CLAUDE.md` for it — the one file that *does* persist across sessions.
