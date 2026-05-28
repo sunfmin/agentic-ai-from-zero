@@ -13,4 +13,5 @@ Maintainer dashboard. One row per chapter file. Update this row in the same comm
 | 04-running-project | 2026-05   | v2.x                | yes               | Personal-writing folder; CLAUDE.md written collaboratively; ships M5 starter |
 | 05-whats-a-skill | 2026-05     | v2.x                | n/a (conceptual)  | Three ideas: skill≠prompt, minimal shape, trigger mechanism |
 | 06-first-skill | 2026-05       | v2.x                | partial (structure verified; live trigger pending) | Ships M4 v1 artifact + verify script |
+| 07-multi-file-skills | 2026-05 | v2.x                | partial (structure verified; live trigger pending) | Ships M4 v2 artifact (SKILL.md + principles.md) |
 | 10-next-steps | 2026-05        | v2.x                | n/a (no commands) | Curated outbound links only |
