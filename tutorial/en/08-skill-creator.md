@@ -121,4 +121,4 @@ If a skill still doesn't trigger after running through this list, simplify the d
 
 ## Next
 
-Chapter 9 — *Three Exercises*. You'll get three stretch tasks, one each for a designer scenario, a PM scenario, and a general scenario — with reference `SKILL.md` answers under `tutorial/skills/exercises/` for when you want to compare.
+[Chapter 9 — *Three Exercises*](./09-exercises.md). You'll get three stretch tasks, one each for a designer scenario, a PM scenario, and a general scenario — with reference `SKILL.md` answers under `tutorial/skills/exercises/` for when you want to compare.

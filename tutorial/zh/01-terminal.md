@@ -110,4 +110,4 @@ yourname@Mac ~ %
 
 ## 下一章
 
-第 2 章 —— *装好你的工具箱*。你会安装 Homebrew、Node.js 和 Claude Code 本体。上面这五个命令就是你导航到正确位置去做这些事的方式。
+[第 2 章 —— *装好你的工具箱*](./02-toolbox.md)。你会安装 Homebrew、Node.js 和 Claude Code 本体。上面这五个命令就是你导航到正确位置去做这些事的方式。

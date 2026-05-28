@@ -83,4 +83,4 @@ Open one and read its `SKILL.md`. Look at the frontmatter. Predict, from the des
 
 ## Next
 
-Chapter 6 — *Your First Skill*. You'll write the `SKILL.md` shown above (almost verbatim), install it, and watch it trigger on the drafts in your running project.
+[Chapter 6 — *Your First Skill*](./06-first-skill.md). You'll write the `SKILL.md` shown above (almost verbatim), install it, and watch it trigger on the drafts in your running project.

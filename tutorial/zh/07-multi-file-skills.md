@@ -107,4 +107,4 @@ v2 的 `SKILL.md` body 现在长这样：
 
 ## 下一章
 
-第 8 章 —— *用 skill-creator*。这次不再手写 `SKILL.md`，而是用普通中文描述你想要的 skill，看着 `/skill-creator` 把整套文件结构帮你生出来。你也会学到 description 不能稳定触发时怎么调它。
+[第 8 章 —— *用 skill-creator*](./08-skill-creator.md)。这次不再手写 `SKILL.md`，而是用普通中文描述你想要的 skill，看着 `/skill-creator` 把整套文件结构帮你生出来。你也会学到 description 不能稳定触发时怎么调它。

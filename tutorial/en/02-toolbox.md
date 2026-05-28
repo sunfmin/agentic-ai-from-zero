@@ -114,4 +114,4 @@ Everything in this book — every chapter, every 🛠 box, every skill — works
 
 ## Next
 
-Chapter 3 — *Your First Session*. You'll create an empty folder, `cd` into it, run `claude`, and have the first real conversation — Claude reading a file you create, Claude writing a new file, Claude running a command.
+[Chapter 3 — *Your First Session*](./03-first-session.md). You'll create an empty folder, `cd` into it, run `claude`, and have the first real conversation — Claude reading a file you create, Claude writing a new file, Claude running a command.

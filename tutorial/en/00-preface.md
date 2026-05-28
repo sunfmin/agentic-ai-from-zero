@@ -54,4 +54,4 @@ If a chapter's calibration timestamp is more than a few months old, treat its co
 
 ## Next
 
-Chapter 1 — *Meet the Terminal*. Five commands, twenty minutes, and the entire mystery of "the command line" cracks open.
+[Chapter 1 — *Meet the Terminal*](./01-terminal.md). Five commands, twenty minutes, and the entire mystery of "the command line" cracks open.

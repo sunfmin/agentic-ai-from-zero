@@ -119,4 +119,4 @@ description: |
 
 ## 下一章
 
-第 9 章 —— *三个练习*。你会拿到三个 stretch 任务：一个设计师场景、一个 PM 场景、一个通用场景 —— `tutorial/skills/exercises/` 下有参考 `SKILL.md` 答案，想对比时去看。
+[第 9 章 —— *三个练习*](./09-exercises.md)。你会拿到三个 stretch 任务：一个设计师场景、一个 PM 场景、一个通用场景 —— `tutorial/skills/exercises/` 下有参考 `SKILL.md` 答案，想对比时去看。
