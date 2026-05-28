@@ -1,5 +1,7 @@
 # Agentic AI from Zero
 
+> 🌐 **中文版**：[`README.zh.md`](./README.zh.md)
+
 A bilingual (Chinese + English) tutorial repository that takes a complete CLI beginner from "I've never opened the terminal" to "I've written a multi-file Claude Code skill."
 
 This repository contains:

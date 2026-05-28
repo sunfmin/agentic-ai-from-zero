@@ -1,5 +1,7 @@
 # Agentic AI from Zero — English
 
+> 🌐 **中文版**：[`../zh/README.md`](../zh/README.md)
+
 The English mirror of a bilingual tutorial that takes a complete CLI beginner (GUI-only, never touched a command line) to writing multi-file Claude Code skills.
 
 ## Chapters
