@@ -8,4 +8,5 @@ Maintainer dashboard. One row per chapter file. Update this row in the same comm
 |--------------|-----------------|---------------------|------------------|-------|
 | 00-preface   | 2026-05         | v2.x                | n/a (no commands) | Initial draft |
 | 01-terminal  | 2026-05         | v2.x                | yes               | Five commands (pwd, ls, cd, mkdir, open) |
+| 02-toolbox   | 2026-05         | v2.x                | yes               | Homebrew → Node.js → Claude Code → login; payment sidebar |
 | 10-next-steps | 2026-05        | v2.x                | n/a (no commands) | Curated outbound links only |
