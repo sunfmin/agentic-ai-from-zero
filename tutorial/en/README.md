@@ -7,16 +7,16 @@ The English mirror of a bilingual tutorial that takes a complete CLI beginner (G
 ## Chapters
 
 0. [Preface — From the Chat Box](./00-preface.md)
-1. Meet the Terminal *(not yet published)*
-2. Set Up Your Toolbox *(not yet published)*
-3. Your First Session *(not yet published)*
-4. Teaching Claude Your Project *(not yet published)*
-5. What's a Skill *(not yet published)*
-6. Your First Skill *(not yet published)*
-7. Multi-File Skills — Progressive Disclosure *(not yet published)*
-8. Using skill-creator *(not yet published)*
-9. Three Exercises *(not yet published)*
-10. Where to Go Next *(not yet published)*
+1. [Meet the Terminal](./01-terminal.md)
+2. [Set Up Your Toolbox](./02-toolbox.md)
+3. [Your First Session](./03-first-session.md)
+4. [Teaching Claude Your Project](./04-running-project.md)
+5. [What's a Skill](./05-whats-a-skill.md)
+6. [Your First Skill](./06-first-skill.md)
+7. [Multi-File Skills — Progressive Disclosure](./07-multi-file-skills.md)
+8. [Using skill-creator](./08-skill-creator.md)
+9. [Three Exercises](./09-exercises.md)
+10. [Where to Go Next](./10-next-steps.md)
 
 ## How to read
 

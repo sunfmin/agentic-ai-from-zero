@@ -7,16 +7,16 @@
 ## 章节
 
 0. [前言 —— 从聊天框走出来](./00-preface.md)
-1. 认识终端 *(尚未发布)*
-2. 装好你的工具箱 *(尚未发布)*
-3. 你的第一次对话 *(尚未发布)*
-4. 让 Claude 认识你的项目 *(尚未发布)*
-5. 什么是 skill *(尚未发布)*
-6. 写你的第一个 skill *(尚未发布)*
-7. 多文件 skill —— 渐进式展开 *(尚未发布)*
-8. 用 skill-creator 设计 skill *(尚未发布)*
-9. 三个练习 *(尚未发布)*
-10. 下一步 *(尚未发布)*
+1. [认识终端](./01-terminal.md)
+2. [装好你的工具箱](./02-toolbox.md)
+3. [你的第一次对话](./03-first-session.md)
+4. [让 Claude 认识你的项目](./04-running-project.md)
+5. [什么是 skill](./05-whats-a-skill.md)
+6. [写你的第一个 skill](./06-first-skill.md)
+7. [多文件 skill —— 渐进式展开](./07-multi-file-skills.md)
+8. [用 skill-creator 设计 skill](./08-skill-creator.md)
+9. [三个练习](./09-exercises.md)
+10. [下一步](./10-next-steps.md)
 
 ## 怎么读
 
