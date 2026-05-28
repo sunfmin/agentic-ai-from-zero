@@ -1,5 +1,7 @@
 # Agentic AI from Zero — 中文版
 
+> 🌐 **English version**: [`../en/README.md`](../en/README.md)
+
 从零基础（只用过 GUI、从没用过命令行）到能写多文件 Claude Code skill 的双语教程的中文版。
 
 ## 章节
