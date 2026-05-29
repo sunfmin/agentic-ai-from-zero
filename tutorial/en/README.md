@@ -16,7 +16,8 @@ The English mirror of a bilingual tutorial that takes a complete CLI beginner (G
 7. [Multi-File Skills — Progressive Disclosure](./07-multi-file-skills.md)
 8. [Using skill-creator](./08-skill-creator.md)
 9. [Three Exercises](./09-exercises.md)
-10. [Where to Go Next](./10-next-steps.md)
+10. [Version-Control and Share Your Skill](./10-version-and-share.md)
+11. [Where to Go Next](./11-next-steps.md)
 
 ## How to read
 

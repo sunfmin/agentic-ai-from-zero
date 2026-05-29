@@ -16,7 +16,8 @@
 7. [多文件 skill —— 渐进式展开](./07-multi-file-skills.md)
 8. [用 skill-creator 设计 skill](./08-skill-creator.md)
 9. [三个练习](./09-exercises.md)
-10. [下一步](./10-next-steps.md)
+10. [版本管理与分享你的 skill](./10-version-and-share.md)
+11. [下一步](./11-next-steps.md)
 
 ## 怎么读
 
