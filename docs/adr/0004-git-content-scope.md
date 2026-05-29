@@ -1,0 +1,18 @@
+# Admit git/GitHub content — but only agent-operated, concept-level, scoped to sharing skills
+
+[ADR-0001](./0001-tutorial-scope.md) warned that "each branch we'd add would dwarf the tutorial itself," and git is the textbook example of such a branch. We are nonetheless adding git/GitHub content, because it serves a job that sits squarely on the tutorial's destination (skills): **version-controlling and sharing the skill the reader built.** The reason this does not violate ADR-0001's spirit is the framing: **the reader never learns git's command syntax or internals (staging area, HEAD, branches, conflicts, rebase). Claude Code runs git/gh on request; the reader learns ~5 concepts (commit = checkpoint, diff = what changed, revert, push = publish, clone = how others install) and how to ask for them.** That ceiling is what keeps git from ballooning into "another book."
+
+## Considered options
+
+- **Teach git commands hands-on (like chapter 1's five commands).** Rejected: this is precisely the branch ADR-0001 says will dwarf the tutorial — staging, HEAD, remotes, auth, conflicts are each their own lesson.
+- **Local version control only; no GitHub.** Rejected: the chosen job is *sharing* skills, and stopping at local commits delivers only half of it.
+- **Separate dev directory + symlink/copy into `~/.claude/skills/`.** Rejected: chapters 6–7 build the skill directly in `~/.claude/skills/review-writing/`. A separate dev dir would force edits back into those chapters and add a symlink concept the reader doesn't need.
+- **Agent-operated, concept-level, skill-folder-as-repo, full local→GitHub (chosen).** The skill folder at `~/.claude/skills/review-writing/` becomes its own git repo and is pushed to GitHub as a standalone repo; one shared skill = one repo; others install by cloning into their own skills directory.
+
+## Consequences
+
+- **New chapter.** A new **chapter 10 — "version-control & share your skill"** is inserted; the former chapter 10 (next-steps / off-ramp) becomes **chapter 11**. New narrative: build (6–8) → practice (9) → share (10) → off-ramp (11).
+- **Renumbering ripple.** `10-next-steps.md` → `11-next-steps.md` in both `zh/` and `en/`; STATUS.md row; inbound cross-links. **Critically:** the "第 10 章会讲 / chapter 10 explains" pointers added in ADR-0003's implementation (preface + the ch10 "为什么是终端 / Why the terminal" section) refer to the *next-steps* content and must be updated to "第 11 章 / chapter 11".
+- **New prerequisite, softly.** A free GitHub account is required for the sharing chapter. Because it is free and takes minutes (unlike the card / network gates in ADR-0001), it is **not** a turn-away prerequisite — the preface only gives a one-line heads-up ("by chapter 10 you'll make a free GitHub account; no action needed now"). Account creation, `brew install gh`, and the one-time `gh auth login` browser login all happen just-in-time inside chapter 10 — **not** backfilled into chapter 2 (which stays focused on getting Claude Code running).
+- **Repo shape.** `git init` happens *in place* inside the skill folder; the tutorial must warn against version-controlling the whole `~/.claude/skills/` directory (that mixes all the reader's personal skills into one repo).
+- **Glossary.** New version-control terms added to `CONTEXT.md`: command-like terms (`git`, `commit`, `diff`, `push`, `clone`, `gh`, `GitHub`) stay English to match what Claude prints; umbrella concepts translate (version control → 版本管理, repository → 仓库). The "matches what you type" rationale from the bilingual policy is replaced here by "matches what Claude prints," since the reader doesn't type these.

@@ -75,6 +75,36 @@ _Avoid_: function (in this context), 函数
 **progressive disclosure / 渐进式展开**:
 The skill design pattern where SKILL.md stays small and references larger sibling files that Claude reads only when needed. Translate to 渐进式展开 in Chinese prose.
 
+### Version control terms
+
+The tutorial introduces these in the sharing chapter. The reader never types these commands — Claude Code runs them on request (see [ADR-0004](./docs/adr/0004-git-content-scope.md)). So the reader's encounter with these words is mostly *reading them in Claude's output*, which is why the command-like terms stay English (matching what Claude prints), and only the umbrella concepts translate.
+
+**version control / 版本管理**:
+The umbrella concept: keeping a tracked history of changes to a folder so you can see what changed and roll back. Translate to 版本管理 in Chinese prose.
+
+**git**:
+The version-control tool Claude Code drives under the hood. Keep English, lowercase, never translated. The reader does not learn git's command syntax — only the concepts below and how to ask Claude to act.
+
+**commit**:
+A saved checkpoint of the skill folder. Keep English; gloss as 存档点 on first use in Chinese prose. Used as both noun and verb ("让 Claude commit 一下").
+_Avoid_: 提交 (don't translate — the reader sees Claude say "committed")
+
+**diff**:
+What changed between two commits. Keep English; gloss as 改了什么 on first use.
+
+**push / clone**:
+**push** = publish your commits to GitHub; **clone** = copy a GitHub repo down to a machine (how someone else *installs* a shared skill). Keep both English; gloss on first use (push≈发布, clone≈拷一份). 
+_Avoid_: 推送 / 克隆 as the canonical form — gloss once, then use English.
+
+**repository / repo / 仓库**:
+A folder under version control, optionally published to GitHub. Here, one shared skill = one repo. Use 仓库 in Chinese prose; "repo" acceptable in passing.
+
+**GitHub**:
+The hosting service skills are published to and shared from. Always written exactly "GitHub". Distinct from `git` (the tool) — do not conflate.
+
+**gh**:
+GitHub's official CLI, installed in the sharing chapter (`brew install gh`) and used for the one-time `gh auth login` browser login. Keep English, lowercase.
+
 ### Payment & access terms
 
 **Claude Pro**:
