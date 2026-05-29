@@ -12,13 +12,15 @@ This tutorial is about climbing over those walls.
 
 ## Why this tutorial exists
 
-Claude Code is Anthropic's CLI agent — the same Claude you've been chatting with, but running in your terminal instead of a web page. It can:
+Claude Code is Anthropic's agent — the same Claude you've been chatting with, but no longer just a chat box. It can:
 
 - Read and write files in your project directly
 - Run commands and read the output
 - Be taught patterns — called **skills** — that it automatically applies when relevant
 
-If you've never opened a terminal, that last sentence has at least three words that need explaining: **CLI**, **terminal**, **skill**. By the end of this book you'll know what each one means. You'll have written your own skill. You'll have upgraded it from one file to many using a technique called *progressive disclosure*. And you'll know how to ask Claude to design new skills for you.
+It now has several doors: you can run it in the **terminal** (the CLI), or use it inside the Claude desktop app. Behind both doors is the same agent, and both climb the three walls above. This book walks through the terminal door from start to finish — not because the desktop app doesn't work, but because Claude Code in the terminal is a **building block**, while the desktop app is a **terminus**. A terminus is handy, but you stop there; a building block can be built into other things. What this building block can eventually build, chapter 10 explains.
+
+If you've never opened a terminal, those lines have at least three words that need explaining: **CLI**, **terminal**, **skill**. By the end of this book you'll know what each one means. You'll have written your own skill. You'll have upgraded it from one file to many using a technique called *progressive disclosure*. And you'll know how to ask Claude to design new skills for you.
 
 ## What you'll be able to do at the end
 
