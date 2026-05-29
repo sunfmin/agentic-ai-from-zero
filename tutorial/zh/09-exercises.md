@@ -65,4 +65,4 @@ _上次校对：2026-05，对齐 Claude Code v2.x_
 
 ## 下一章
 
-[第 10 章 —— *下一步*](./10-next-steps.md)。读完这本书之后接下来去学什么的策展链接。没有新概念；纯 off-ramp。
+[第 10 章 —— *版本管理与分享你的 skill*](./10-version-and-share.md)。让 Claude 帮你给 skill 存档、退回上一版，再把它发到 GitHub 分享给别人。

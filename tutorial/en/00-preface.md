@@ -18,7 +18,7 @@ Claude Code is Anthropic's agent — the same Claude you've been chatting with, 
 - Run commands and read the output
 - Be taught patterns — called **skills** — that it automatically applies when relevant
 
-It now has several doors: you can run it in the **terminal** (the CLI), or use it inside the Claude desktop app. Behind both doors is the same agent, and both climb the three walls above. This book walks through the terminal door from start to finish — not because the desktop app doesn't work, but because Claude Code in the terminal is a **building block**, while the desktop app is a **terminus**. A terminus is handy, but you stop there; a building block can be built into other things. What this building block can eventually build, chapter 10 explains.
+It now has several doors: you can run it in the **terminal** (the CLI), or use it inside the Claude desktop app. Behind both doors is the same agent, and both climb the three walls above. This book walks through the terminal door from start to finish — not because the desktop app doesn't work, but because Claude Code in the terminal is a **building block**, while the desktop app is a **terminus**. A terminus is handy, but you stop there; a building block can be built into other things. What this building block can eventually build, chapter 11 explains.
 
 If you've never opened a terminal, those lines have at least three words that need explaining: **CLI**, **terminal**, **skill**. By the end of this book you'll know what each one means. You'll have written your own skill. You'll have upgraded it from one file to many using a technique called *progressive disclosure*. And you'll know how to ask Claude to design new skills for you.
 
@@ -40,6 +40,8 @@ This book is honest about what it doesn't cover.
 - **A Visa or Mastercard.** Claude Code charges through Anthropic. The book recommends a Claude Pro subscription as the simplest path — about US$20 per month at the time of writing.
 
 If any of those three is missing, stop here. The book can't help you bridge those gaps, and it's more honest to tell you up front than to leave you stranded in chapter 2.
+
+(One small heads-up, **nothing to do now**: by chapter 10 you'll make a **free** GitHub account to share your skill. It's not one of the three hard gates above — a GitHub account is free and takes a few minutes, so you can sort it out when you get there.)
 
 ## How to read this book
 
