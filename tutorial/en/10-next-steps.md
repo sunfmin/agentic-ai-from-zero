@@ -43,6 +43,18 @@ The bootstrap case study at the root of this repository ([`BOOTSTRAP-CASE-STUDY.
 - What's behind it: the ability for Claude to delegate part of a task to a fresh agent with a separate context window, then summarize the result back. Useful when a task would otherwise consume too much context, or when you want parallelism.
 - Who it's for: you, once your skills start handling tasks that involve large research dives, multi-step refactors, or anything where a clean context window matters more than continuity.
 
+## Why the terminal
+
+In the preface I promised you: Claude Code in the terminal is a building block; the desktop app is a terminus. By now you can see the weight of that line — every door above in this chapter is something only the terminal building block can assemble:
+
+- A hook runs your own shell commands on session events — you need somewhere that can run a shell.
+- An MCP server runs alongside Claude Code — you need somewhere that can start a background process.
+- `claude -p` runs once and exits, wiring Claude Code into cron or CI — all of these treat Claude Code as one part inside another program.
+
+The desktop app's chat window is handy, but it stops there: it's the destination of your conversation with the AI. The terminal isn't a destination — it's the patch panel where you wire the AI into all your other tools.
+
+Looking a little further ahead (this is my judgment, not a fact): AI is dissolving the walls between roles, and what one person is expected to do will increasingly spill past their original lane. When that day comes, "being able to wire AI into anything" won't be an engineer's specialty — it'll be general literacy. The building block you're comfortable with today is the starting point for that literacy.
+
 ## Closing
 
 Every chapter in this book has a calibration timestamp at the top, telling you when its commands were last verified. The timestamps will drift; Claude Code will change; the URLs above will eventually move. When something stops matching what you read here, the Anthropic docs are your first stop. Then come back and open an issue on this tutorial's repo so the next reader benefits.

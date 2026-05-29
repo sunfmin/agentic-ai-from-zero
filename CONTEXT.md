@@ -38,8 +38,8 @@ The "按写作原则审稿" skill the reader hand-writes in chapter 6. Single-fi
 ### Product & platform terms
 
 **Claude Code**:
-Anthropic's CLI agent. Always written exactly "Claude Code" — never translated, never abbreviated to "CC" in prose.
-_Avoid_: CC, Claude CLI, Claude 命令行
+Anthropic's coding agent. It runs across several surfaces — the CLI (terminal), the Claude desktop app, the web, and IDE extensions — all driving the *same* agent. **This tutorial teaches the CLI surface specifically** (see [ADR-0003](./docs/adr/0003-cli-not-desktop-app.md) for why). Always written exactly "Claude Code" — never translated, never abbreviated to "CC" in prose.
+_Avoid_: CC, Claude CLI, Claude 命令行; also avoid defining Claude Code *as* "the CLI" — the CLI is one surface, not the thing itself.
 
 **skill**:
 A Claude Code skill — a unit of reusable, automatically-triggered behavior defined by a `SKILL.md` file in a known directory. Always lowercase in prose, never translated (because `SKILL.md` and `/skill-creator` are English in the actual tool — translating in prose would create a mismatch between what the reader reads and what they type).
