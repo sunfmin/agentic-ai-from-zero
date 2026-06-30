@@ -81,4 +81,4 @@ That closes the sharing loop: you checkpoint and publish; they clone and it's in
 
 ## Next
 
-[Chapter 11 — *Where to Go Next*](./11-next-steps.md). That's everything this book set out to teach; the final chapter is an off-ramp showing you what's behind each advanced door.
+[Chapter 11 — *Install the Engineering Skills, Set the Repo's Protocol*](./11-setup-skills.md). By now you can write and share a skill. The "Part 2" chapters that follow change the goal: install a ready-made set of professional skills and use them to turn Claude Code into your project-management partner — from a one-line idea all the way to a pile of issues an agent can build straight away.

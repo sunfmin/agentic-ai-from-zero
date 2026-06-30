@@ -1,6 +1,6 @@
 # Agentic AI from Zero — Tutorial Context
 
-This repo hosts a bilingual (Chinese / English) tutorial that takes a reader from "never used the command line" to "can write a multi-file Claude Code skill." This glossary defines the vocabulary the tutorial uses, so prose and code stay consistent across both languages and all chapters.
+This repo hosts a bilingual (Chinese / English) tutorial that takes a reader from "never used the command line" to "can write a multi-file Claude Code skill" (Part 1, chapters 0–10), and then onward to "can drive a real project's planning and architecture with a professional skill suite" (Part 2 / 进阶篇, chapters 11–15; see [ADR-0005](./docs/adr/0005-engineering-skills-part.md)). This glossary defines the vocabulary the tutorial uses, so prose and code stay consistent across both languages and all chapters.
 
 ## Language
 
@@ -16,8 +16,12 @@ Specifically: an ex-GUI-AI user being upgraded to CLI. The tutorial's main narra
 ### Tutorial structure
 
 **chapter / 章**:
-One of the 11 numbered units (0 through 10). Each chapter is one markdown file under `tutorial/zh/` and a mirror file under `tutorial/en/`. File names are `NN-slug.md` where `NN` is a two-digit number and `slug` is a short English identifier (same slug in both languages).
+One of the 17 numbered units (0 through 16): Part 1 is 0–10, Part 2 / 进阶篇 is 11–15, and the off-ramp (next-steps) is 16. Each chapter is one markdown file under `tutorial/zh/` and a mirror file under `tutorial/en/`. File names are `NN-slug.md` where `NN` is a two-digit number and `slug` is a short English identifier (same slug in both languages).
 _Avoid_: lesson, section (section means something narrower — a heading within a chapter)
+
+**进阶篇 / Part 2**:
+Chapters 11–15, an explicitly-marked second part that teaches *using* five skills from the `mattpocock/skills` engineering suite as a project-management workflow. It expands the book's destination past Part 1's "write a multi-file skill" ceiling (see [ADR-0005](./docs/adr/0005-engineering-skills-part.md)). The reader does not learn to *build* these skills, only to use them as `/commands`.
+_Avoid_: appendix (it is taught material, not reference), 番外
 
 **section / 节**:
 A heading-level subdivision within a chapter (`##` heading). Not its own file.
@@ -104,6 +108,46 @@ The hosting service skills are published to and shared from. Always written exac
 
 **gh**:
 GitHub's official CLI, installed in the sharing chapter (`brew install gh`) and used for the one-time `gh auth login` browser login. Keep English, lowercase.
+
+### Engineering-skills terms (进阶篇 / Part 2)
+
+These appear only in chapters 11–16. Most are borrowed engineering vocabulary; the policy mirrors the rest of the glossary — keep command-like and field names English, translate umbrella concepts.
+
+**engineering skill suite / 工程 skill 套件**:
+The open-source `mattpocock/skills` set the 进阶篇 teaches *using* (not building). Refer to the repo exactly as `mattpocock/skills`. The suite is installed with `npx skills@latest add mattpocock/skills`.
+_Avoid_: plugin, 插件; calling individual skills "the suite."
+
+**user-invoked / model-invoked**:
+The two kinds of skill in the suite. **user-invoked** skills run only when the reader types `/command` (their `SKILL.md` carries `disable-model-invocation: true`); **model-invoked** skills can also be triggered by Claude on its own. The five skills taught in Part 2 are all user-invoked. Keep both terms English.
+
+**the five skills**:
+Always written as their `/command` form, English, never translated: `/setup-matt-pocock-skills`, `/grill-with-docs`, `/to-prd`, `/to-issues`, `/improve-codebase-architecture`. (`ask-matt` and others are named in chapter 16 only.)
+
+**agent protocol / agent 协议**:
+The per-repo configuration `/setup-matt-pocock-skills` writes — a `## Agent skills` block in `CLAUDE.md` plus `docs/agents/{issue-tracker,triage-labels,domain}.md` — that every later skill reads. Glossed in chapter 11 as the "接线盒 / junction box." Translate the umbrella; keep file names English.
+
+**PRD**:
+Product requirements document — the fixed seven-section artifact `/to-prd` synthesizes and files as an issue. Keep the acronym English in both languages.
+_Avoid_: 需求文档 as the canonical form (gloss once, then use PRD); spec (narrower).
+
+**issue**:
+A unit of tracked work in the project's issue tracker (GitHub Issues here). Keep English; "一个 issue" in Chinese prose.
+_Avoid_: ticket (the skills' own prose uses both; this tutorial standardizes on "issue"), 工单.
+
+**triage label / triage 角色**:
+One of the five canonical states an issue moves through: `needs-triage`, `needs-info`, `ready-for-agent`, `ready-for-human`, `wontfix`. Keep the label strings English (they are literal labels). `ready-for-agent` is the one the planning pipeline applies.
+
+**vertical slice / 垂直切片** (tracer bullet):
+A unit of work that cuts end-to-end through every layer (schema, interface, UI, tests) and is demoable on its own — what `/to-issues` produces. Contrast with a horizontal (by-layer) slice. Translate to 垂直切片; keep "tracer bullet" English as the gloss.
+_Avoid_: 水平切片 as a thing to produce (it's the anti-pattern).
+
+**deep module / shallow module / 深模块 / 浅模块**:
+From the `/codebase-design` vocabulary used by `/improve-codebase-architecture`. A module is **deep** when a lot of behaviour sits behind a small **interface**; **shallow** when the interface is nearly as complex as the implementation (the thing to avoid). Translate the module nouns; keep **interface**, **seam**, **adapter**, **leverage**, **locality** English (no settled Chinese forms, and they must match the skill's own report).
+_Avoid_: component, service, unit (for module); API, signature (for interface); boundary (for seam).
+
+**sample project / 示例项目**:
+The throwaway fixture codebase at `tutorial/sample-project/`, shared (language-neutral) by both `zh/` and `en/` chapter 15, deliberately containing a shallow-module deepening opportunity so the reader can run `/improve-codebase-architecture` against real code. Mirrors how `tutorial/skills/` is shared.
+_Avoid_: demo, running project (the running project is Part 1's personal-writing folder — distinct).
 
 ### Payment & access terms
 

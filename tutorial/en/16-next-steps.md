@@ -1,8 +1,8 @@
-# Chapter 11 — Where to Go Next
+# Chapter 16 — Where to Go Next
 
 _Last calibrated: 2026-05, against Claude Code v2.x_
 
-You've finished the book. You can navigate a terminal, run Claude Code, write a `SKILL.md` by hand, decompose it across files with progressive disclosure, and use `/skill-creator` to design new skills conversationally. That's everything this book set out to teach.
+You've finished the book. You can navigate a terminal, run Claude Code, write a `SKILL.md` by hand, decompose it across files with progressive disclosure, and use `/skill-creator` to design new skills conversationally; and in Part 2 you ran a professional skill set through the "lay down a protocol → grill into decisions → synthesize a PRD → slice into issues" planning pipeline, and deepened the architecture of an existing codebase once. That's everything this book set out to teach.
 
 This chapter is the **off-ramp**. It does not teach the topics below — every one of them is its own book. The point here is just to tell you what's behind each door, so you can decide which one to open next.
 
@@ -13,14 +13,22 @@ This chapter is the **off-ramp**. It does not teach the topics below — every o
 - What's behind it: the source of truth for the CLI's commands, configuration, environment variables, and feature flags.
 - Who it's for: you, every time something the book taught you behaves differently than expected, or whenever you want to know whether a feature exists.
 
-## The engineering-skills workflow
+## The rest of the engineering-skills suite (untaught here)
 
 **`mattpocock/skills`** — https://github.com/mattpocock/skills
 
-- What's behind it: the open-source set of Claude Code skills (`grill-with-docs`, `to-prd`, `to-issues`, `tdd`, and many more) that turn Claude Code into a project-management partner, not just a coding partner.
-- Who it's for: you, once you've used Claude Code for a real project and want to start managing the project itself — its decisions, its tickets, its tests — from inside Claude Code.
+Part 2 (chapters 11–15) taught only five skills from this suite: `/setup-matt-pocock-skills`, `/grill-with-docs`, `/to-prd`, `/to-issues`, `/improve-codebase-architecture`. There are several more doors it didn't open:
 
-The bootstrap case study at the root of this repository ([`BOOTSTRAP-CASE-STUDY.md`](../../BOOTSTRAP-CASE-STUDY.md) / [`BOOTSTRAP-CASE-STUDY.en.md`](../../BOOTSTRAP-CASE-STUDY.en.md)) walks through one full session that used these skills end-to-end.
+- **`/tdd`** — red-green-refactor test-driven development: write a failing test first, then make the code pass it, giving the agent a steady feedback loop.
+- **`/diagnosing-bugs`** — a disciplined debugging loop: reproduce → minimize → hypothesize → instrument → fix → add a regression test.
+- **`/triage`** — move issues along a state machine (the five triage roles from chapter 11 exist for this).
+- **`/handoff`** — compact the current conversation into a handoff document so another agent can continue the work.
+- **`ask-matt`** — when you're unsure which skill fits, ask it and it routes you.
+
+- Who it's for: you, once Part 2's planning pipeline feels natural and you want to extend into "write the code + test the code + fix the code."
+- How to keep up: the repo's README links the author's newsletter, where new skills and changes are announced.
+
+The bootstrap case study at the root of this repository ([`BOOTSTRAP-CASE-STUDY.md`](../../BOOTSTRAP-CASE-STUDY.md) / [`BOOTSTRAP-CASE-STUDY.en.md`](../../BOOTSTRAP-CASE-STUDY.en.md)) walks through one full session that ran this pipeline end-to-end — the real transcript of the Part 2 workflow.
 
 ## Hooks
 

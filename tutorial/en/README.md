@@ -17,7 +17,18 @@ The English mirror of a bilingual tutorial that takes a complete CLI beginner (G
 8. [Using skill-creator](./08-skill-creator.md)
 9. [Three Exercises](./09-exercises.md)
 10. [Version-Control and Share Your Skill](./10-version-and-share.md)
-11. [Where to Go Next](./11-next-steps.md)
+
+### Part 2 — Manage Real Projects with the Engineering Skill Suite
+
+11. [Install the Engineering Skills, Set the Repo's Protocol](./11-setup-skills.md)
+12. [Grill a Fuzzy Idea into Decisions](./12-grill-with-docs.md)
+13. [Synthesize Decisions into a PRD](./13-to-prd.md)
+14. [Slice the PRD into Grabbable Issues](./14-to-issues.md)
+15. [Deepen a Codebase](./15-improve-architecture.md)
+
+### Wrapping up
+
+16. [Where to Go Next](./16-next-steps.md)
 
 ## How to read
 

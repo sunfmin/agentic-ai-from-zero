@@ -1,8 +1,8 @@
-# 第 11 章 —— 下一步
+# 第 16 章 —— 下一步
 
 _上次校对：2026-05，对齐 Claude Code v2.x_
 
-你已经读完这本书。你会在终端里导航，会跑 Claude Code，会手写一个 `SKILL.md`，会用渐进式展开把它拆成多文件，也会用 `/skill-creator` 通过对话设计新的 skill。这本书要教的，到此为止。
+你已经读完这本书。你会在终端里导航，会跑 Claude Code，会手写一个 `SKILL.md`，会用渐进式展开把它拆成多文件，也会用 `/skill-creator` 通过对话设计新的 skill；进阶篇里，你还用一套专业 skill 跑通了「立协议 → 逼成决策 → 综合 PRD → 切成 issue」这条规划流水线，并对已有代码做过一次架构深化。这本书要教的，到此为止。
 
 这一章是 **off-ramp（出口匝道）**。下面列的话题，这一章都不教 —— 每一个都是另一本书。这里的目的只是告诉你每扇门后面是什么，让你自己决定下一个推开哪一扇。
 
@@ -13,14 +13,22 @@ _上次校对：2026-05，对齐 Claude Code v2.x_
 - 门后是什么：CLI 的命令、配置、环境变量、feature flag 的事实来源。
 - 适合谁：你，每次本书教你的东西和实际表现对不上的时候；每次你想知道某个特性到底存不存在的时候。
 
-## 这套 engineering-skills 工作流
+## 这套 engineering-skills 套件里还没教的部分
 
 **`mattpocock/skills`** —— https://github.com/mattpocock/skills
 
-- 门后是什么：一套开源的 Claude Code skills（`grill-with-docs`、`to-prd`、`to-issues`、`tdd` 等等），把 Claude Code 从"编程搭子"扩展成"项目管理搭子" —— 决策、ticket、测试都从 Claude Code 里管。
-- 适合谁：你，当你用 Claude Code 做完一个真实项目之后，想开始管理项目本身（不只是写代码）的时候。
+进阶篇（第 11–15 章）只教了套件里的五个 skill：`/setup-matt-pocock-skills`、`/grill-with-docs`、`/to-prd`、`/to-issues`、`/improve-codebase-architecture`。套件里还有不少没展开的门：
 
-本仓库根目录下的 bootstrap case study（[`BOOTSTRAP-CASE-STUDY.md`](../../BOOTSTRAP-CASE-STUDY.md) / [`BOOTSTRAP-CASE-STUDY.en.md`](../../BOOTSTRAP-CASE-STUDY.en.md)）记录了一次从空目录开始、端到端跑完这套 skills 的完整 session。
+- **`/tdd`** —— 红-绿-重构的测试驱动开发：先写一个会失败的测试，再让代码通过它，给 agent 一条稳定的反馈回路。
+- **`/diagnosing-bugs`** —— 有纪律的排错循环：复现 → 最小化 → 假设 → 埋点 → 修 → 加回归测试。
+- **`/triage`** —— 把 issue 沿一个状态机推进（第 11 章那五个 triage 角色就是给它用的）。
+- **`/handoff`** —— 把当前对话压缩成一份交接文档，让另一个 agent 接着干。
+- **`ask-matt`** —— 拿不准该用哪个 skill 时问它，它帮你路由。
+
+- 适合谁：你，当进阶篇那条规划流水线已经顺手、想往「写代码 + 测代码 + 修代码」继续铺的时候。
+- 怎么跟进：仓库 README 里有作者的 newsletter，新 skill 和改动都在那儿发。
+
+本仓库根目录下的 bootstrap case study（[`BOOTSTRAP-CASE-STUDY.md`](../../BOOTSTRAP-CASE-STUDY.md) / [`BOOTSTRAP-CASE-STUDY.en.md`](../../BOOTSTRAP-CASE-STUDY.en.md)）记录了一次从空目录开始、端到端跑完这条流水线的完整 session —— 正是进阶篇那套流程的真实实录。
 
 ## Hooks
 

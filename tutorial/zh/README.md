@@ -17,7 +17,18 @@
 8. [用 skill-creator 设计 skill](./08-skill-creator.md)
 9. [三个练习](./09-exercises.md)
 10. [版本管理与分享你的 skill](./10-version-and-share.md)
-11. [下一步](./11-next-steps.md)
+
+### 进阶篇 —— 用工程 skill 套件管理真实项目
+
+11. [装上工程 skill 套件，给仓库立协议](./11-setup-skills.md)
+12. [把模糊想法逼成决策](./12-grill-with-docs.md)
+13. [把决策综合成 PRD](./13-to-prd.md)
+14. [把 PRD 切成可独立开工的 issue](./14-to-issues.md)
+15. [把代码深化](./15-improve-architecture.md)
+
+### 收尾
+
+16. [下一步](./16-next-steps.md)
 
 ## 怎么读
 
