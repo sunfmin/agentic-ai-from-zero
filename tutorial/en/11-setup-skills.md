@@ -55,9 +55,9 @@ The suite installs through an installer called skills.sh. Run this in your termi
 >
 > You should see: an interactive list of every skill in the repo, letting you pick which to install and onto which agent (Claude Code, etc.).
 >
-> **Just select all of them** — it's the simplest and safest choice. At minimum you must install `setup-matt-pocock-skills` and the four Part 2 uses: `grill-with-docs`, `to-prd`, `to-issues`, `improve-codebase-architecture`.
+> **Just select all of them.** Simplest and safest — don't cherry-pick, for the reason in the note below.
 
-> ⚠️ **Don't install only those.** These `/command` skills delegate to a set of model-invoked "parts" skills underneath — `grill-with-docs` calls `grilling` and `domain-modeling`, and `improve-codebase-architecture` also calls `codebase-design`. If the parts aren't installed, the top-level skills misbehave (an incomplete grill, no report). So select all — don't cherry-pick.
+> ⚠️ **Why you can't install just a few.** What Part 2 actually teaches you to use is `setup-matt-pocock-skills` plus these four: `grill-with-docs`, `to-prd`, `to-issues`, `improve-codebase-architecture`. But these `/command` skills delegate to a set of model-invoked "parts" skills underneath — `grill-with-docs` calls `grilling` and `domain-modeling`, and `improve-codebase-architecture` also calls `codebase-design`. Install only the front ones and skip the parts, and the top-level skills misbehave (an incomplete grill, no report). So select all — don't cherry-pick.
 
 Confirm they landed:
 

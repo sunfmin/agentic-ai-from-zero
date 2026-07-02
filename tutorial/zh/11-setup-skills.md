@@ -55,9 +55,9 @@ _上次校对：2026-06，对齐 Claude Code v2.x_
 >
 > 你应该看到：一个交互式清单，列出仓库里所有 skill，让你勾选要装哪些、装到哪个 agent（Claude Code 等）。
 >
-> **直接全选，把整套装齐** —— 这是最省事也最稳的做法。至少必须装上 `setup-matt-pocock-skills`，以及进阶篇要用的这四个：`grill-with-docs`、`to-prd`、`to-issues`、`improve-codebase-architecture`。
+> **全选，把整套都装上。** 最省事也最稳 —— 别自己挑，原因见下面的提醒。
 
-> ⚠️ **别只挑上面这几个装。** 这些你打 `/命令` 触发的 skill，底下会调用一批 model-invoked 的「零件」skill —— `grill-with-docs` 会调 `grilling` 和 `domain-modeling`，`improve-codebase-architecture` 还会调 `codebase-design`。零件没装上，主 skill 跑起来就缺胳膊少腿（逼问不完整、报告出不来）。所以 **全选装齐**，别自己挑。
+> ⚠️ **为什么不能只挑几个装。** 进阶篇真正教你用的，是 `setup-matt-pocock-skills` 加这四个：`grill-with-docs`、`to-prd`、`to-issues`、`improve-codebase-architecture`。但这些你打 `/命令` 触发的 skill，底下还会调用一批 model-invoked 的「零件」skill —— `grill-with-docs` 会调 `grilling` 和 `domain-modeling`，`improve-codebase-architecture` 还会调 `codebase-design`。只装前面那几个、不装底下的零件，主 skill 跑起来就缺胳膊少腿（逼问不完整、报告出不来）。所以 **直接全选**，别自己挑。
 
 装完确认一下它们到位了：
 
