@@ -55,7 +55,9 @@ The suite installs through an installer called skills.sh. Run this in your termi
 >
 > You should see: an interactive list of every skill in the repo, letting you pick which to install and onto which agent (Claude Code, etc.).
 >
-> **Make sure you check `setup-matt-pocock-skills`**, plus these five: `grill-with-docs`, `to-prd`, `to-issues`, `improve-codebase-architecture`. If that's fiddly, just select all.
+> **Just select all of them** — it's the simplest and safest choice. At minimum you must install `setup-matt-pocock-skills` and the four Part 2 uses: `grill-with-docs`, `to-prd`, `to-issues`, `improve-codebase-architecture`.
+
+> ⚠️ **Don't install only those.** These `/command` skills delegate to a set of model-invoked "parts" skills underneath — `grill-with-docs` calls `grilling` and `domain-modeling`, and `improve-codebase-architecture` also calls `codebase-design`. If the parts aren't installed, the top-level skills misbehave (an incomplete grill, no report). So select all — don't cherry-pick.
 
 Confirm they landed:
 
@@ -151,7 +153,7 @@ You now have a repo that has a **protocol, is on GitHub, but contains not a line
 
 - Part 2 teaches you to **use** a ready-made set of professional skills, not write them — same posture as using `/skill-creator` in chapter 8.
 - All five skills are **user-invoked**: they run only when you type `/command`; they never surface on their own.
-- Install: `npx skills@latest add mattpocock/skills`, check `setup-matt-pocock-skills` and the five; **start a new session** afterward.
+- Install: `npx skills@latest add mattpocock/skills`, **select all** (these skills depend on lower-level `grilling` / `domain-modeling` / `codebase-design` — don't cherry-pick just the ones we teach); **start a new session** afterward.
 - Run `/setup-matt-pocock-skills` **once per repo** to lay down the protocol (issue tracker / triage labels / domain docs), written into `CLAUDE.md` + `docs/agents/`.
 - That protocol is the **junction box** every later skill plugs into — done once, it removes countless "where do issues go, what label?" round-trips.
 

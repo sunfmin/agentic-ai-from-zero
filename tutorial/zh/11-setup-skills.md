@@ -55,7 +55,9 @@ _上次校对：2026-06，对齐 Claude Code v2.x_
 >
 > 你应该看到：一个交互式清单，列出仓库里所有 skill，让你勾选要装哪些、装到哪个 agent（Claude Code 等）。
 >
-> **务必勾上 `setup-matt-pocock-skills`**，外加这五个：`grill-with-docs`、`to-prd`、`to-issues`、`improve-codebase-architecture`。嫌麻烦也可以全勾。
+> **直接全选，把整套装齐** —— 这是最省事也最稳的做法。至少必须装上 `setup-matt-pocock-skills`，以及进阶篇要用的这四个：`grill-with-docs`、`to-prd`、`to-issues`、`improve-codebase-architecture`。
+
+> ⚠️ **别只挑上面这几个装。** 这些你打 `/命令` 触发的 skill，底下会调用一批 model-invoked 的「零件」skill —— `grill-with-docs` 会调 `grilling` 和 `domain-modeling`，`improve-codebase-architecture` 还会调 `codebase-design`。零件没装上，主 skill 跑起来就缺胳膊少腿（逼问不完整、报告出不来）。所以 **全选装齐**，别自己挑。
 
 装完确认一下它们到位了：
 
@@ -151,7 +153,7 @@ _上次校对：2026-06，对齐 Claude Code v2.x_
 
 - 进阶篇教你 **用** 一套现成的专业 skill，不是写它们 —— 跟第 8 章用 `/skill-creator` 同一个路子。
 - 这五个 skill 都是 **user-invoked**：你打 `/命令` 才跑，不会自己冒出来。
-- 装法：`npx skills@latest add mattpocock/skills`，勾上 `setup-matt-pocock-skills` 和那五个；装完 **开新 session**。
+- 装法：`npx skills@latest add mattpocock/skills`，**全选装齐**（这几个 skill 依赖底层的 `grilling` / `domain-modeling` / `codebase-design`，别只挑教到的几个）；装完 **开新 session**。
 - `/setup-matt-pocock-skills` 每个仓库 **跑一次**，立好协议（issue tracker / triage 标签 / domain 文档），写进 `CLAUDE.md` + `docs/agents/`。
 - 这套协议是后面每个 skill 的 **接线盒** —— 做一次，省掉无数次「issue 发哪儿、贴什么标签」的重复问答。
 
