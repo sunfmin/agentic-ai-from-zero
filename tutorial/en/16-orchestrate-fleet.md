@@ -57,15 +57,18 @@ That's the whole idea: parallelism you can watch. But you're still the one start
 >
 > You should see: afk-fleet read your repo's ready issues and print the **dispatch plan** — which issues it *would* pick up, in what order — while merging and changing **nothing**. A dry run needs no authorization.
 
-The dry run is the safe way to see what the fleet sees. When you're ready to let it actually work, you authorize it — and this is the most consequential thing the whole book asks you to turn on, so read it slowly:
+The dry run is the safe way to see what the fleet sees. When you let it actually work, you choose **how far each worker goes on its own** — there are two settings:
 
-> ⚠️ Running `/afk-fleet` for real means: it will **push branches to your remote and auto-merge green PRs to `main` without asking each time**. That is the point — unattended means unattended — but only ever authorize it on a repo where an automatic merge to `main` is acceptable (a practice repo, a project with a real gate before deploy). The fleet's job **ends at a green merge to `main`**; shipping past that stays a separate, human step.
+- **Hold at the PR** (the default when you don't grant auto-merge — e.g. a `/afk-fleet --tick` run cold): each worker opens its PR and runs the gate, then **stops there**. You review and merge yourself. The fleet still does all the tedious part — dispatch, worktrees, gate — but the last click stays human.
+- **Auto-merge to `main`** (opt-in, behind one explicit authorization): green PRs squash-merge into `main` unattended. This is the full AFK mode, and it's the most consequential thing the whole book asks you to turn on, so read it slowly:
+
+> ⚠️ Authorizing auto-merge means `/afk-fleet` will **push branches to your remote and merge green PRs into `main` without asking each time**. That is the point — unattended means unattended — but only ever grant it on a repo where an automatic merge to `main` is acceptable (a practice repo, or a project with a real gate before deploy). Withhold it and the fleet simply holds at open PRs for you. Either way the fleet's job **ends at `main`**; shipping past that stays a separate, human step.
 
 What stands between a worker's PR and `main` is the **gate**. On a repo with CI, that's the checks going green. This book's own repo has no CI — it's prose — so its fleet config (`docs/agents/afk-fleet.md`) uses an **independent adversarial-verification** pass instead: a separate agent re-reads each PR against the issue's acceptance criteria and tries to *refute* it before merge, because a machine can't tell good prose from wrong prose.
 
 > 🛠 Try it
 >
-> When you're ready, run `/afk-fleet` (no `--plan`) and give it the authorization it asks for.
+> When you're ready, run `/afk-fleet` (no `--plan`) and give it the auto-merge authorization it asks for. (Prefer to eyeball each PR yourself? Withhold it — or run a `/afk-fleet --tick` cold — and the fleet dispatches, gates, and stops at open PRs.)
 >
 > You should see: ticks begin dispatching workers — one per ready issue — each in its own orca worktree; PRs open; the gate runs; green PRs squash-merge to `main`; failures retry a couple of times and then escalate (labeled for a human, with a comment explaining where it got stuck). Issues whose blockers aren't merged yet wait their turn. You can close the laptop; the loop keeps going.
 
@@ -80,8 +83,8 @@ Look at what just happened. A desktop app (orca) started many terminal agents; a
 - Part 3 answers "who runs the backlog Part 2 produced, and where."
 - **worktree**: a second working copy of a repo on its own branch — one per issue is what makes parallel agents safe.
 - **orca**: a desktop ADE that runs several Claude Code agents in parallel worktrees; you watch and merge. It's the building-block thesis paying off, not a terminus.
-- **afk-fleet**: the author's own skill, built on orca — a launcher spawns disposable ticks that put a worker on each `ready-for-agent` issue, gate each PR, and auto-merge the green ones unattended.
-- Always `/afk-fleet --plan` first; authorize the real run only where **auto-merge to `main`** is acceptable. The gate (CI, or adversarial verification for prose) is what protects `main`.
+- **afk-fleet**: the author's own skill, built on orca — a launcher spawns disposable ticks that put a worker on each `ready-for-agent` issue and gate each PR; grant auto-merge and it merges the green ones unattended, withhold it and it holds at the PR.
+- Always `/afk-fleet --plan` first. Merging is a choice: **hold at the PR** (default — you review and merge) or **auto-merge to `main`** (opt-in, behind one authorization); grant auto-merge only where it's acceptable. The gate (CI, or adversarial verification for prose) is what protects `main`.
 - You use both tools; you don't build them.
 
 ## Next
