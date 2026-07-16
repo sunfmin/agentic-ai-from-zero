@@ -22,4 +22,4 @@ Maintainer dashboard. One row per chapter file. Update this row in the same comm
 | 13-to-spec | 2026-06          | v2.x                | partial (authored; not yet run on a clean Mac) | /to-spec: no interview, seam sketch, 7-section template, ready-for-agent issue |
 | 14-to-tickets | 2026-06       | v2.x                | partial (authored; not yet run on a clean Mac) | /to-tickets: vertical (tracer-bullet) slices, quiz, dependency-ordered publish |
 | 15-improve-architecture | 2026-06 | v2.x            | partial (authored; runs against tutorial/sample-project/) | /improve-codebase-architecture: deep/shallow vocab, HTML report, grilling loop |
-| 16-next-steps | 2026-05        | v2.x                | n/a (no commands) | Curated outbound links only; renumbered from 11 |
+| 17-next-steps | 2026-05        | v2.x                | n/a (no commands) | Curated outbound links only; renumbered 11 → 16 → 17 |

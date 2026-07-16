@@ -110,4 +110,4 @@ _上次校对：2026-06，对齐 Claude Code v2.x_
 
 ## 下一章
 
-[第 16 章 —— *下一步*](./16-next-steps.md)。进阶篇到此结束。最后一章是整本书的「出口匝道」：告诉你这套套件里 **还没教** 的部分（`/tdd`、`/triage`、`/diagnosing-bugs` 等），以及 hooks、MCP、subagents 这些更大的门，各自后面是什么。
+[第 17 章 —— *下一步*](./17-next-steps.md)。进阶篇到此结束。最后一章是整本书的「出口匝道」：告诉你这套套件里 **还没教** 的部分（`/tdd`、`/triage`、`/diagnosing-bugs` 等），以及 hooks、MCP、subagents 这些更大的门，各自后面是什么。

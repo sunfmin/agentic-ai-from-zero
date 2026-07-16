@@ -28,7 +28,7 @@ The English mirror of a bilingual tutorial that takes a complete CLI beginner (G
 
 ### Wrapping up
 
-16. [Where to Go Next](./16-next-steps.md)
+17. [Where to Go Next](./17-next-steps.md)
 
 ## How to read
 

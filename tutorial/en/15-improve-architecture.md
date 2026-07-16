@@ -111,4 +111,4 @@ When the grilling's done, you have a **thought-through deepening plan** — actu
 
 ## Next
 
-[Chapter 16 — *Where to Go Next*](./16-next-steps.md). Part 2 ends here. The final chapter is the whole book's off-ramp: it tells you what's still **untaught** in this suite (`/tdd`, `/triage`, `/diagnosing-bugs`, and more), and what's behind the bigger doors — hooks, MCP, subagents.
+[Chapter 17 — *Where to Go Next*](./17-next-steps.md). Part 2 ends here. The final chapter is the whole book's off-ramp: it tells you what's still **untaught** in this suite (`/tdd`, `/triage`, `/diagnosing-bugs`, and more), and what's behind the bigger doors — hooks, MCP, subagents.

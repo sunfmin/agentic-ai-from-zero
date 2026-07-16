@@ -1,4 +1,4 @@
-# Chapter 16 — Where to Go Next
+# Chapter 17 — Where to Go Next
 
 _Last calibrated: 2026-05, against Claude Code v2.x_
 
