@@ -36,8 +36,8 @@ Below is how Claude Code turned that one sentence into a PRD and 11 executable i
 
 1. **`/setup-matt-pocock-skills`** — gives the repo the "protocol" that agents need to follow (where issues live, which triage labels to use, how to read domain docs)
 2. **`/grill-with-docs`** — **relentlessly interrogates** your rough idea with 14 specific questions, squeezing it into concrete decisions; meanwhile, it lands the decisions into `CONTEXT.md` and `docs/adr/`
-3. **`/to-prd`** — synthesizes all the decisions into a PRD and publishes it as a GitHub issue
-4. **`/to-issues`** — breaks the PRD into 11 independently-grabbable vertical slices and publishes each one as a GitHub issue
+3. **`/to-spec`** — synthesizes all the decisions into a spec (you may know this document as a PRD) and publishes it as a GitHub issue
+4. **`/to-tickets`** — breaks the PRD into 11 independently-grabbable vertical slices and publishes each one as a GitHub issue
 
 ---
 
@@ -66,7 +66,7 @@ docs/agents/domain.md              ← How to read CONTEXT.md / ADRs
 
 ### Why this step matters
 
-Every skill used later (grill, to-prd, to-issues) **reads these files** to learn:
+Every skill used later (grill, to-spec, to-tickets) **reads these files** to learn:
 - Should it `gh issue create`, write to `.scratch/`, or something else
 - Which label to apply for "ready for AFK agent"
 - Where to find project terminology
@@ -177,15 +177,15 @@ More importantly: **decisions leave a paper trail**. `CONTEXT.md` is the termino
 
 ---
 
-## Step 4: Synthesize all the decisions into a PRD — `/to-prd`
+## Step 4: Synthesize all the decisions into a PRD — `/to-spec`
 
 ### What I typed
 
 ```
-/to-prd
+/to-spec
 ```
 
-Bare command, no extra explanation. The whole point of `to-prd` is **don't interview the user — just synthesize the existing context**.
+Bare command, no extra explanation. The whole point of `to-spec` is **don't interview the user — just synthesize the existing context**.
 
 ### What Claude did
 
@@ -205,7 +205,7 @@ https://github.com/sunfmin/agentic-ai-from-zero/issues/1
 
 ### What's in the PRD
 
-Following the `to-prd` template (problem / solution / user stories / implementation decisions / testing decisions / out of scope / further notes):
+Following the `to-spec` template (problem / solution / user stories / implementation decisions / testing decisions / out of scope / further notes):
 
 - **26 user stories** covering reader, maintainer, and future-contributor perspectives
 - **Responsibility boundaries for 5 modules**, with each module's interface called out
@@ -216,27 +216,27 @@ Following the `to-prd` template (problem / solution / user stories / implementat
 
 ### Bonus: backfilled the 5 canonical triage labels
 
-The earlier setup step only wrote the label **convention** into `docs/agents/triage-labels.md` — the actual labels didn't exist on the GitHub repo yet. When `to-prd` went to create the issue, it called `gh label list`, noticed 4 were missing (`needs-triage`, `needs-info`, `ready-for-agent`, `ready-for-human`), and just created them, then posted the issue.
+The earlier setup step only wrote the label **convention** into `docs/agents/triage-labels.md` — the actual labels didn't exist on the GitHub repo yet. When `to-spec` went to create the issue, it called `gh label list`, noticed 4 were missing (`needs-triage`, `needs-info`, `ready-for-agent`, `ready-for-human`), and just created them, then posted the issue.
 
 Small detail, but pivotal — Claude detected a **gap between protocol and reality** and closed it on its own, without making me `gh label create` four times by hand.
 
 ### Why this step matters
 
-The PRD is not handwritten — and not "AI polished a draft I wrote." It is a **mechanical synthesis of all the decisions captured during the grill**. Put differently, **the real design work was already done in the grill**; `to-prd` just packages those decisions into a template an AFK agent can act on directly.
+The PRD is not handwritten — and not "AI polished a draft I wrote." It is a **mechanical synthesis of all the decisions captured during the grill**. Put differently, **the real design work was already done in the grill**; `to-spec` just packages those decisions into a template an AFK agent can act on directly.
 
-If you skip the grill and go straight to `/to-prd`, you get a PRD that "sounds reasonable but every line is generic" — because no decision was ever made concretely. That's a grill problem, not a `to-prd` problem.
+If you skip the grill and go straight to `/to-spec`, you get a PRD that "sounds reasonable but every line is generic" — because no decision was ever made concretely. That's a grill problem, not a `to-spec` problem.
 
 ---
 
-## Step 5: Cut the PRD into 11 vertical slices — `/to-issues`
+## Step 5: Cut the PRD into 11 vertical slices — `/to-tickets`
 
 ### What I typed
 
 ```
-/to-issues
+/to-tickets
 ```
 
-Another bare command. `to-issues` knows to read issue #1 on its own.
+Another bare command. `to-tickets` knows to read issue #1 on its own.
 
 ### What Claude did
 
@@ -259,7 +259,7 @@ I answered "per the recommendation," and Claude posted 11 issues in dependency o
 
 ### What each issue looks like
 
-The template (enforced by `to-issues`):
+The template (enforced by `to-tickets`):
 
 - **Parent**: #1 (the PRD)
 - **What to build**: end-to-end behavior description, **no specific file paths** (they rot fast)
@@ -326,7 +326,7 @@ The grill forces you to make a choice at every fork. I couldn't skip "should mai
 
 ### 4. PRDs and issues are mechanical outputs, not creative outputs
 
-`/to-prd` and `/to-issues` don't do fresh design work — they just stuff already-resolved decisions into the PRD and issue templates. That's why those steps are fast and hard to get wrong. If the grill was shallow, the PRD comes out generic — but that's a grill problem, not a `to-prd` problem.
+`/to-spec` and `/to-tickets` don't do fresh design work — they just stuff already-resolved decisions into the PRD and issue templates. That's why those steps are fast and hard to get wrong. If the grill was shallow, the PRD comes out generic — but that's a grill problem, not a `to-spec` problem.
 
 ### 5. The protocol (CLAUDE.md + docs/agents/) is the wiring harness for every other skill
 
@@ -349,8 +349,8 @@ Every subsequent skill quietly reads `docs/agents/issue-tracker.md` and `docs/ag
 (create the GitHub repo + push)        ← Give agents a place to post issues
 /grill-with-docs <one-line of what you want to build>
                                        ← Turn a fuzzy idea into concrete decisions
-/to-prd                                ← Synthesize decisions into a PRD
-/to-issues                             ← Cut the PRD into executable issues
+/to-spec                               ← Synthesize decisions into a PRD
+/to-tickets                            ← Cut the PRD into executable issues
 ```
 
 ### Key 1: be willing to be interrogated by the grill
@@ -383,13 +383,13 @@ Empty repo with a protocol
    ▼
 Repo with a paper trail of decisions
    │
-   │ /to-prd                    ← Synthesize into PRD
+   │ /to-spec                   ← Synthesize into PRD
    │  → issue #N (the PRD)
    │
    ▼
 Repo with a PRD
    │
-   │ /to-issues                 ← Cut into vertical slices
+   │ /to-tickets                ← Cut into vertical slices
    │  → issues #N+1...
    │
    ▼
@@ -413,7 +413,7 @@ In issue order:
 2. Slices #3 ~ #11 chain serially, executed by AFK agents
 3. Slice #12 (Chapter 10 next-steps) can run in parallel with the main chain
 
-The PRD in issue #1 is the "constitution" for every future change in this repo. New requirements either get their own PRD-prefixed issue via `/to-prd`, or get attached as sub-tasks under issue #1 via `/to-issues`.
+The PRD in issue #1 is the "constitution" for every future change in this repo. New requirements either get their own PRD-prefixed issue via `/to-spec`, or get attached as sub-tasks under issue #1 via `/to-tickets`.
 
 ---
 

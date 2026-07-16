@@ -30,11 +30,11 @@ repo with a protocol
    │   → CONTEXT.md, docs/adr/
    ▼
 repo with a paper trail
-   │  /to-prd                     ← synthesizes a PRD (chapter 13)
+   │  /to-spec                    ← synthesizes a PRD (chapter 13)
    │   → one PRD issue
    ▼
 repo with a PRD
-   │  /to-issues                  ← slices into grabbable issues (chapter 14)
+   │  /to-tickets                 ← slices into grabbable issues (chapter 14)
    │   → a pile of ready-for-agent issues
    ▼
 issues an agent can pick up and build
@@ -57,7 +57,7 @@ The suite installs through an installer called skills.sh. Run this in your termi
 >
 > **Just select all of them.** Simplest and safest — don't cherry-pick, for the reason in the note below.
 
-> ⚠️ **Why you can't install just a few.** What Part 2 actually teaches you to use is `setup-matt-pocock-skills` plus these four: `grill-with-docs`, `to-prd`, `to-issues`, `improve-codebase-architecture`. But these `/command` skills delegate to a set of model-invoked "parts" skills underneath — `grill-with-docs` calls `grilling` and `domain-modeling`, and `improve-codebase-architecture` also calls `codebase-design`. Install only the front ones and skip the parts, and the top-level skills misbehave (an incomplete grill, no report). So select all — don't cherry-pick.
+> ⚠️ **Why you can't install just a few.** What Part 2 actually teaches you to use is `setup-matt-pocock-skills` plus these four: `grill-with-docs`, `to-spec`, `to-tickets`, `improve-codebase-architecture`. But these `/command` skills delegate to a set of model-invoked "parts" skills underneath — `grill-with-docs` calls `grilling` and `domain-modeling`, and `improve-codebase-architecture` also calls `codebase-design`. Install only the front ones and skip the parts, and the top-level skills misbehave (an incomplete grill, no report). So select all — don't cherry-pick.
 
 Confirm they landed:
 
@@ -129,7 +129,7 @@ Once you've answered, it shows you what it's about to write before saving. Appro
 
 `/setup-matt-pocock-skills` does no real work itself — no business code, no issues filed. But it's the junction box that **every** later skill plugs into:
 
-- When `/to-prd` and `/to-issues` need to file an issue, they read `docs/agents/issue-tracker.md` and so know to call `gh issue create` instead of asking you "where?"
+- When `/to-spec` and `/to-tickets` need to file an issue, they read `docs/agents/issue-tracker.md` and so know to call `gh issue create` instead of asking you "where?"
 - When they label an issue "an agent can pick this up now," they read `docs/agents/triage-labels.md` and apply `ready-for-agent` rather than inventing a label.
 - Before `/grill-with-docs` and `/improve-codebase-architecture` explore code, they read `docs/agents/domain.md` and so know where the glossary lives.
 
@@ -137,7 +137,7 @@ Skip this step and every later skill has to **ask you all over again** "where do
 
 ## Save and publish this step
 
-You already know the git/GitHub moves from chapter 10. Have Claude check in this protocol and push it — and set up the GitHub remote for this practice repo at the same time, so `/to-prd` and `/to-issues` have somewhere to file issues.
+You already know the git/GitHub moves from chapter 10. Have Claude check in this protocol and push it — and set up the GitHub remote for this practice repo at the same time, so `/to-spec` and `/to-tickets` have somewhere to file issues.
 
 > 🛠 Try it
 >

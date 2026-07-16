@@ -22,8 +22,8 @@
 
 11. [装上工程 skill 套件，给仓库立协议](./11-setup-skills.md)
 12. [把模糊想法逼成决策](./12-grill-with-docs.md)
-13. [把决策综合成 PRD](./13-to-prd.md)
-14. [把 PRD 切成可独立开工的 issue](./14-to-issues.md)
+13. [把决策综合成 PRD](./13-to-spec.md)
+14. [把 PRD 切成可独立开工的 issue](./14-to-tickets.md)
 15. [把代码深化](./15-improve-architecture.md)
 
 ### 收尾

@@ -19,7 +19,7 @@ Maintainer dashboard. One row per chapter file. Update this row in the same comm
 | 10-version-and-share | 2026-05 | v2.x                | partial (concepts verified; gh auth/push pending) | git/GitHub via Claude; commit/diff/revert + publish + clone-to-install |
 | 11-setup-skills | 2026-06     | v2.x                | partial (authored; not yet run on a clean Mac) | Part 2 opener: 4-failure-modes framing + npx skills install + /setup-matt-pocock-skills |
 | 12-grill-with-docs | 2026-06  | v2.x                | partial (authored; not yet run on a clean Mac) | grill-with-docs = /grilling + /domain-modeling; CONTEXT.md + ADR grow inline |
-| 13-to-prd | 2026-06          | v2.x                | partial (authored; not yet run on a clean Mac) | /to-prd: no interview, seam sketch, 7-section template, ready-for-agent issue |
-| 14-to-issues | 2026-06       | v2.x                | partial (authored; not yet run on a clean Mac) | /to-issues: vertical (tracer-bullet) slices, quiz, dependency-ordered publish |
+| 13-to-spec | 2026-06          | v2.x                | partial (authored; not yet run on a clean Mac) | /to-spec: no interview, seam sketch, 7-section template, ready-for-agent issue |
+| 14-to-tickets | 2026-06       | v2.x                | partial (authored; not yet run on a clean Mac) | /to-tickets: vertical (tracer-bullet) slices, quiz, dependency-ordered publish |
 | 15-improve-architecture | 2026-06 | v2.x            | partial (authored; runs against tutorial/sample-project/) | /improve-codebase-architecture: deep/shallow vocab, HTML report, grilling loop |
 | 16-next-steps | 2026-05        | v2.x                | n/a (no commands) | Curated outbound links only; renumbered from 11 |

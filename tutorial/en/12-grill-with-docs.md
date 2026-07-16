@@ -91,7 +91,7 @@ When the grilling is over, you have more than "we talked it through" — you hav
 - but every **dispute that could cause later rework** (accounts? multi-device sync? delete semantics?) already answered;
 - and the answers are **on the record** — `CONTEXT.md` is the glossary, `docs/adr/` is the rationale book for hard-to-reverse decisions.
 
-This step turns "fuzzy idea" into "finalized decisions." **The real design work is done in this chapter.** Next chapter's `/to-prd` does no new design — it just packs these decisions into a template. So the harder you grill, the easier everything after; grill lazily, and the PRD comes out vague and empty.
+This step turns "fuzzy idea" into "finalized decisions." **The real design work is done in this chapter.** Next chapter's `/to-spec` does no new design — it just packs these decisions into a template. So the harder you grill, the easier everything after; grill lazily, and the PRD comes out vague and empty.
 
 Save this step's output:
 
@@ -111,4 +111,4 @@ Save this step's output:
 
 ## Next
 
-[Chapter 13 — *Synthesize Decisions into a PRD*](./13-to-prd.md). You'll fire a bare `/to-prd` and watch it **ask you nothing**, synthesizing this chapter's decisions straight into a full PRD and filing it as a GitHub issue.
+[Chapter 13 — *Synthesize Decisions into a PRD*](./13-to-spec.md). You'll fire a bare `/to-spec` and watch it **ask you nothing**, synthesizing this chapter's decisions straight into a full PRD and filing it as a GitHub issue.
