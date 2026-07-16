@@ -2,7 +2,7 @@
 
 _Last calibrated: 2026-07, against Claude Code v2.x_
 
-Part 2 ended with a **backlog**: a pile of `ready-for-agent` issues, cut into vertical slices and ordered by dependency (chapter 14). You built the plan. This chapter — **Part 3, the 执行篇 ("run it") movement** — is about the obvious next question: *who actually implements that backlog, and where do they run?*
+Part 2 ended with a **backlog**: a pile of `ready-for-agent` issues, cut into vertical slices and ordered by dependency (chapter 14). You built the plan. This chapter — **Part 3, the "run it" movement** — is about the obvious next question: *who actually implements that backlog, and where do they run?*
 
 Two tools answer it, and you'll **use** them, not build them (same posture Part 2 took toward the five skills):
 
@@ -15,7 +15,7 @@ This is the payoff the preface promised. Back there I said Claude Code in the te
 
 You've used git to checkpoint and share (chapter 10). One more piece of git vocabulary unlocks this chapter:
 
-- **worktree** — a second working copy of one repo, on its own branch, in its own folder (git ≈ 独立工作副本). Normally a repo has one working copy and you switch branches inside it. A worktree lets you have *many* checkouts of the same repo side by side — so two agents can edit "the same project" at once without ever touching each other's files.
+- **worktree** — a second working copy of one repo, on its own branch, in its own folder. Normally a repo has one working copy and you switch branches inside it. A worktree lets you have *many* checkouts of the same repo side by side — so two agents can edit "the same project" at once without ever touching each other's files.
 
 That's the trick that makes parallel agents safe: **one worktree per issue**. Agent A works issue #12 in its worktree on branch `issue-12-…`; agent B works issue #13 in another. Neither sees the other's half-finished edits. Each opens a pull request when done.
 
