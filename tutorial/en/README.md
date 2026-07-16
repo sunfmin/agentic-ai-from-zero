@@ -22,8 +22,8 @@ The English mirror of a bilingual tutorial that takes a complete CLI beginner (G
 
 11. [Install the Engineering Skills, Set the Repo's Protocol](./11-setup-skills.md)
 12. [Grill a Fuzzy Idea into Decisions](./12-grill-with-docs.md)
-13. [Synthesize Decisions into a PRD](./13-to-prd.md)
-14. [Slice the PRD into Grabbable Issues](./14-to-issues.md)
+13. [Synthesize Decisions into a PRD](./13-to-spec.md)
+14. [Slice the PRD into Grabbable Issues](./14-to-tickets.md)
 15. [Deepen a Codebase](./15-improve-architecture.md)
 
 ### Wrapping up

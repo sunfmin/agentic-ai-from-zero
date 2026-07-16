@@ -17,7 +17,7 @@ This chapter is the **off-ramp**. It does not teach the topics below — every o
 
 **`mattpocock/skills`** — https://github.com/mattpocock/skills
 
-Part 2 (chapters 11–15) taught only five skills from this suite: `/setup-matt-pocock-skills`, `/grill-with-docs`, `/to-prd`, `/to-issues`, `/improve-codebase-architecture`. There are several more doors it didn't open:
+Part 2 (chapters 11–15) taught only five skills from this suite: `/setup-matt-pocock-skills`, `/grill-with-docs`, `/to-spec`, `/to-tickets`, `/improve-codebase-architecture`. There are several more doors it didn't open:
 
 - **`/tdd`** — red-green-refactor test-driven development: write a failing test first, then make the code pass it, giving the agent a steady feedback loop.
 - **`/diagnosing-bugs`** — a disciplined debugging loop: reproduce → minimize → hypothesize → instrument → fix → add a regression test.

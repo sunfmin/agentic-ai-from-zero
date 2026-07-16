@@ -17,7 +17,7 @@ _上次校对：2026-05，对齐 Claude Code v2.x_
 
 **`mattpocock/skills`** —— https://github.com/mattpocock/skills
 
-进阶篇（第 11–15 章）只教了套件里的五个 skill：`/setup-matt-pocock-skills`、`/grill-with-docs`、`/to-prd`、`/to-issues`、`/improve-codebase-architecture`。套件里还有不少没展开的门：
+进阶篇（第 11–15 章）只教了套件里的五个 skill：`/setup-matt-pocock-skills`、`/grill-with-docs`、`/to-spec`、`/to-tickets`、`/improve-codebase-architecture`。套件里还有不少没展开的门：
 
 - **`/tdd`** —— 红-绿-重构的测试驱动开发：先写一个会失败的测试，再让代码通过它，给 agent 一条稳定的反馈回路。
 - **`/diagnosing-bugs`** —— 有纪律的排错循环：复现 → 最小化 → 假设 → 埋点 → 修 → 加回归测试。

@@ -2,7 +2,7 @@
 
 _上次校对：2026-06，对齐 Claude Code v2.x_
 
-上一章你有了一份 PRD（一个 GitHub issue）。但一份 PRD 是张 **全景图** —— 一个 agent 盯着它，不知道该从哪儿下嘴。这一章把全景图切成一个个 **能独立拿走开工** 的小 issue。用的 skill 是 `/to-issues`。
+上一章你有了一份 PRD（一个 GitHub issue）。但一份 PRD 是张 **全景图** —— 一个 agent 盯着它，不知道该从哪儿下嘴。这一章把全景图切成一个个 **能独立拿走开工** 的小 issue。用的 skill 是 `/to-tickets`。
 
 这一章只有一个核心概念，但它是这套流程里最重要的判断之一：**怎么切**。
 
@@ -29,7 +29,7 @@ _上次校对：2026-06，对齐 Claude Code v2.x_
 切片 #3：能把一个条目标记读完                                    ← 做完能演示！
 ```
 
-`/to-issues` 切的是 **后者**。规则就三条：
+`/to-tickets` 切的是 **后者**。规则就三条：
 
 - 每片都走通 **从头到尾的一条窄路**（schema、接口、界面、测试都碰一点）；
 - 每片做完都 **能单独演示或验证**；
@@ -39,13 +39,13 @@ _上次校对：2026-06，对齐 Claude Code v2.x_
 
 ## 动手：切你的 PRD
 
-`/to-issues` 会用当前对话里的 PRD；你也可以把上一章那个 PRD issue 号直接传给它。
+`/to-tickets` 会用当前对话里的 PRD；你也可以把上一章那个 PRD issue 号直接传给它。
 
 > 🛠 试一试
 >
-> 在 prompt 上输入（把 `#1` 换成你上一章那个 PRD 的 issue 号；如果还在同一个 session，光打 `/to-issues` 也行）：
+> 在 prompt 上输入（把 `#1` 换成你上一章那个 PRD 的 issue 号；如果还在同一个 session，光打 `/to-tickets` 也行）：
 >
-> > `/to-issues #1`
+> > `/to-tickets #1`
 >
 > 你应该看到：Claude 读完那份 PRD（可能顺便扫一眼仓库找「预重构」的机会），然后给你一个 **编号的切片清单**。每个切片标了：
 >
@@ -55,7 +55,7 @@ _上次校对：2026-06，对齐 Claude Code v2.x_
 
 ## 它会反过来 quiz 你
 
-切片清单不是给你看完就发的。`/to-issues` 会先 **问你几件事**，确认切得对：
+切片清单不是给你看完就发的。`/to-tickets` 会先 **问你几件事**，确认切得对：
 
 - 颗粒度合适吗？（太粗？太细？）
 - 依赖关系对吗？（谁真的得等谁）
@@ -78,7 +78,7 @@ _上次校对：2026-06，对齐 Claude Code v2.x_
 | **Acceptance criteria** | 一串 checkbox，每条都可验证 |
 | **Blocked by** | 指向卡着它的那个 issue，或者「None —— 能立刻开工」 |
 
-它们都贴 `ready-for-agent` 标签（这些切片就是给 AFK agent 准备的）。`/to-issues` **不会** 去关闭或改动那份父 PRD issue。
+它们都贴 `ready-for-agent` 标签（这些切片就是给 AFK agent 准备的）。`/to-tickets` **不会** 去关闭或改动那份父 PRD issue。
 
 > 🛠 试一试
 >
@@ -86,7 +86,7 @@ _上次校对：2026-06，对齐 Claude Code v2.x_
 >
 > 你应该看到：一串新 issue 被创建出来（issue 号顺着上一章的 PRD 往后排），每个都引用了父 PRD、列了验收标准、标了 blocker。打开其中一个看看 —— 它具体到一个 agent 不用再问任何人就能开工。
 
-> 💡 真实项目里，有些切片你会想 **亲自 review** 而不是放手给 agent —— 典型是那个把规范立起来、后面全建在它上面的「打头」切片。看 [`BOOTSTRAP-CASE-STUDY.md`](../../BOOTSTRAP-CASE-STUDY.md)：那次把本书切成 11 个切片，**打头那片标了「需要人在合并时审一遍」**，其余的才放手给 agent。你也可以让 `/to-issues` 这么标。
+> 💡 真实项目里，有些切片你会想 **亲自 review** 而不是放手给 agent —— 典型是那个把规范立起来、后面全建在它上面的「打头」切片。看 [`BOOTSTRAP-CASE-STUDY.md`](../../BOOTSTRAP-CASE-STUDY.md)：那次把本书切成 11 个切片，**打头那片标了「需要人在合并时审一遍」**，其余的才放手给 agent。你也可以让 `/to-tickets` 这么标。
 
 ## 整条流水线，到此闭环
 
@@ -96,8 +96,8 @@ _上次校对：2026-06，对齐 Claude Code v2.x_
 模糊想法
   → /setup-matt-pocock-skills   （第 11 章：立协议）
   → /grill-with-docs            （第 12 章：逼成决策 + CONTEXT.md/ADR）
-  → /to-prd                     （第 13 章：综合成 PRD issue）
-  → /to-issues                  （第 14 章：切成 ready-for-agent 的 issue）
+  → /to-spec                    （第 13 章：综合成 PRD issue）
+  → /to-tickets                 （第 14 章：切成 ready-for-agent 的 issue）
   → 一堆能让 agent 直接开工的 issue
 ```
 
@@ -107,7 +107,7 @@ _上次校对：2026-06，对齐 Claude Code v2.x_
 
 ## 小结
 
-- `/to-issues` 把 PRD 切成 **垂直切片**（端到端、能单独演示），不是按层切的水平切片。
+- `/to-tickets` 把 PRD 切成 **垂直切片**（端到端、能单独演示），不是按层切的水平切片。
 - 预重构先做：「先让改动变容易，再做这个容易的改动」。
 - 它会先 **quiz 你** 颗粒度和依赖，迭代到你满意，再 **按依赖顺序** 发 issue。
 - issue 模板：Parent / What to build（不写文件路径）/ Acceptance criteria / Blocked by，贴 `ready-for-agent`。

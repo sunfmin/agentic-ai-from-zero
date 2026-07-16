@@ -121,13 +121,13 @@ _Avoid_: plugin, 插件; calling individual skills "the suite."
 The two kinds of skill in the suite. **user-invoked** skills run only when the reader types `/command` (their `SKILL.md` carries `disable-model-invocation: true`); **model-invoked** skills can also be triggered by Claude on its own. The five skills taught in Part 2 are all user-invoked. Keep both terms English.
 
 **the five skills**:
-Always written as their `/command` form, English, never translated: `/setup-matt-pocock-skills`, `/grill-with-docs`, `/to-prd`, `/to-issues`, `/improve-codebase-architecture`. (`ask-matt` and others are named in chapter 16 only.)
+Always written as their `/command` form, English, never translated: `/setup-matt-pocock-skills`, `/grill-with-docs`, `/to-spec`, `/to-tickets`, `/improve-codebase-architecture`. (`ask-matt` and others are named in chapter 16 only.)
 
 **agent protocol / agent 协议**:
 The per-repo configuration `/setup-matt-pocock-skills` writes — a `## Agent skills` block in `CLAUDE.md` plus `docs/agents/{issue-tracker,triage-labels,domain}.md` — that every later skill reads. Glossed in chapter 11 as the "接线盒 / junction box." Translate the umbrella; keep file names English.
 
 **PRD**:
-Product requirements document — the fixed seven-section artifact `/to-prd` synthesizes and files as an issue. Keep the acronym English in both languages.
+Product requirements document — the fixed seven-section artifact `/to-spec` synthesizes and files as an issue. Keep the acronym English in both languages.
 _Avoid_: 需求文档 as the canonical form (gloss once, then use PRD); spec (narrower).
 
 **issue**:
@@ -138,7 +138,7 @@ _Avoid_: ticket (the skills' own prose uses both; this tutorial standardizes on 
 One of the five canonical states an issue moves through: `needs-triage`, `needs-info`, `ready-for-agent`, `ready-for-human`, `wontfix`. Keep the label strings English (they are literal labels). `ready-for-agent` is the one the planning pipeline applies.
 
 **vertical slice / 垂直切片** (tracer bullet):
-A unit of work that cuts end-to-end through every layer (schema, interface, UI, tests) and is demoable on its own — what `/to-issues` produces. Contrast with a horizontal (by-layer) slice. Translate to 垂直切片; keep "tracer bullet" English as the gloss.
+A unit of work that cuts end-to-end through every layer (schema, interface, UI, tests) and is demoable on its own — what `/to-tickets` produces. Contrast with a horizontal (by-layer) slice. Translate to 垂直切片; keep "tracer bullet" English as the gloss.
 _Avoid_: 水平切片 as a thing to produce (it's the anti-pattern).
 
 **deep module / shallow module / 深模块 / 浅模块**:

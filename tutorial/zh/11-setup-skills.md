@@ -30,11 +30,11 @@ _上次校对：2026-06，对齐 Claude Code v2.x_
    │   → CONTEXT.md、docs/adr/
    ▼
 有决策留痕的仓库
-   │  /to-prd                     ← 综合成一份 PRD（第 13 章）
+   │  /to-spec                    ← 综合成一份 PRD（第 13 章）
    │   → 一个 PRD issue
    ▼
 有 PRD 的仓库
-   │  /to-issues                  ← 切成可独立开工的 issue（第 14 章）
+   │  /to-tickets                 ← 切成可独立开工的 issue（第 14 章）
    │   → 一堆 ready-for-agent 的 issue
    ▼
 一堆能让 agent 直接拿去干的 issue
@@ -57,7 +57,7 @@ _上次校对：2026-06，对齐 Claude Code v2.x_
 >
 > **全选，把整套都装上。** 最省事也最稳 —— 别自己挑，原因见下面的提醒。
 
-> ⚠️ **为什么不能只挑几个装。** 进阶篇真正教你用的，是 `setup-matt-pocock-skills` 加这四个：`grill-with-docs`、`to-prd`、`to-issues`、`improve-codebase-architecture`。但这些你打 `/命令` 触发的 skill，底下还会调用一批 model-invoked 的「零件」skill —— `grill-with-docs` 会调 `grilling` 和 `domain-modeling`，`improve-codebase-architecture` 还会调 `codebase-design`。只装前面那几个、不装底下的零件，主 skill 跑起来就缺胳膊少腿（逼问不完整、报告出不来）。所以 **直接全选**，别自己挑。
+> ⚠️ **为什么不能只挑几个装。** 进阶篇真正教你用的，是 `setup-matt-pocock-skills` 加这四个：`grill-with-docs`、`to-spec`、`to-tickets`、`improve-codebase-architecture`。但这些你打 `/命令` 触发的 skill，底下还会调用一批 model-invoked 的「零件」skill —— `grill-with-docs` 会调 `grilling` 和 `domain-modeling`，`improve-codebase-architecture` 还会调 `codebase-design`。只装前面那几个、不装底下的零件，主 skill 跑起来就缺胳膊少腿（逼问不完整、报告出不来）。所以 **直接全选**，别自己挑。
 
 装完确认一下它们到位了：
 
@@ -129,7 +129,7 @@ _上次校对：2026-06，对齐 Claude Code v2.x_
 
 `/setup-matt-pocock-skills` 自己什么活都没干 —— 没写一行业务代码、没发一个 issue。但它是后面 **每一个** skill 的接线盒：
 
-- `/to-prd` 和 `/to-issues` 要发 issue 时，会去读 `docs/agents/issue-tracker.md`，于是知道该调 `gh issue create`，而不是反过来问你「发哪儿」。
+- `/to-spec` 和 `/to-tickets` 要发 issue 时，会去读 `docs/agents/issue-tracker.md`，于是知道该调 `gh issue create`，而不是反过来问你「发哪儿」。
 - 它们贴「这个 issue 可以让 agent 直接干了」的标签时，读 `docs/agents/triage-labels.md`，于是贴的是 `ready-for-agent` 而不是自己瞎编一个。
 - `/grill-with-docs`、`/improve-codebase-architecture` 探索代码前，读 `docs/agents/domain.md`，于是知道去哪儿找术语字典。
 
@@ -137,7 +137,7 @@ _上次校对：2026-06，对齐 Claude Code v2.x_
 
 ## 把这一步存档并发布
 
-你已经会用第 10 章学的 git/GitHub 了。让 Claude 把这套协议存个档、推上去 —— 顺手给这个练手仓库建好 GitHub 远端，后面 `/to-prd`、`/to-issues` 才有地方发 issue。
+你已经会用第 10 章学的 git/GitHub 了。让 Claude 把这套协议存个档、推上去 —— 顺手给这个练手仓库建好 GitHub 远端，后面 `/to-spec`、`/to-tickets` 才有地方发 issue。
 
 > 🛠 试一试
 >

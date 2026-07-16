@@ -12,8 +12,8 @@ In order, they form one planning pipeline plus one independent entry point:
 
 1. `/setup-matt-pocock-skills` — one-time per-repo setup: picks the issue tracker, the triage-label vocabulary, and the domain-doc layout; writes a `## Agent skills` block + `docs/agents/*.md` that every other skill reads.
 2. `/grill-with-docs` — a relentless one-question-at-a-time interview (`/grilling`) fused with domain modeling (`/domain-modeling`): turns a fuzzy idea into concrete decisions, recording terms in `CONTEXT.md` and hard-to-reverse choices as ADRs *inline*.
-3. `/to-prd` — no interview; mechanically synthesizes the conversation into a PRD and publishes it as a `ready-for-agent` issue.
-4. `/to-issues` — slices a PRD into tracer-bullet **vertical slices** (end-to-end, not layer-by-layer) and publishes them as grabbable issues in dependency order.
+3. `/to-spec` — no interview; mechanically synthesizes the conversation into a PRD and publishes it as a `ready-for-agent` issue.
+4. `/to-tickets` — slices a PRD into tracer-bullet **vertical slices** (end-to-end, not layer-by-layer) and publishes them as grabbable issues in dependency order.
 5. `/improve-codebase-architecture` — a separate entry point for *existing* code: scans for shallow→deep "deepening opportunities," renders a visual HTML report, then grills through a chosen candidate.
 
 ## Considered options
@@ -25,7 +25,7 @@ In order, they form one planning pipeline plus one independent entry point:
 
 ## Consequences
 
-- **Five new chapters.** `11-setup-skills`, `12-grill-with-docs`, `13-to-prd`, `14-to-issues`, `15-improve-architecture` are inserted. New narrative: build (6–8) → practice (9) → share (10) → **use the suite on real work (11–15)** → off-ramp (16).
+- **Five new chapters.** `11-setup-skills`, `12-grill-with-docs`, `13-to-spec`, `14-to-tickets`, `15-improve-architecture` are inserted. New narrative: build (6–8) → practice (9) → share (10) → **use the suite on real work (11–15)** → off-ramp (16).
 - **Renumbering ripple.** `11-next-steps.md` → `16-next-steps.md` in both `zh/` and `en/` (via `git mv`); the in-chapter title `第 11 章 / Chapter 11` → `第 16 章 / Chapter 16`; the STATUS.md row slug; the README chapter lists; and inbound cross-links. **Critically:** the preface pointer ("这块积木将来能搭成什么，第 11 章会讲 / what this building block can build, chapter 11 explains") and chapter 10's "下一章 / Next" pointer (which called next-steps "the last chapter / off-ramp") both refer to numbering that moves — they must be repointed. Chapter 10's "Next" now leads into the 进阶篇 (chapter 11), no longer into the off-ramp.
 - **Next-steps reframed.** The "engineering-skills workflow" section in next-steps was an *unopened* door; once the 进阶篇 teaches it, that section is rewritten to point at the parts of the suite the book still does **not** teach (`/tdd`, `/triage`, `/diagnosing-bugs`, `/handoff`, `ask-matt`) plus the upstream repo. The other doors (hooks, MCP, subagents, official docs, "why the terminal") stay.
 - **New prerequisite, softly.** The 进阶篇 requires installing the suite (`npx skills@latest add mattpocock/skills`). This happens just-in-time inside chapter 11 — **not** backfilled into chapter 2. GitHub + `gh` are already established by ADR-0004's chapter 10, so no new account gate is introduced.

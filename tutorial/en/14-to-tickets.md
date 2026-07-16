@@ -2,7 +2,7 @@
 
 _Last calibrated: 2026-06, against Claude Code v2.x_
 
-Last chapter you got a PRD (one GitHub issue). But a PRD is a **panorama** — an agent staring at it doesn't know where to bite. This chapter slices the panorama into small issues that can each be **grabbed and worked independently**. The skill is `/to-issues`.
+Last chapter you got a PRD (one GitHub issue). But a PRD is a **panorama** — an agent staring at it doesn't know where to bite. This chapter slices the panorama into small issues that can each be **grabbed and worked independently**. The skill is `/to-tickets`.
 
 This chapter has one core concept, but it's one of the most important judgments in this whole workflow: **how to slice**.
 
@@ -29,7 +29,7 @@ Slice #2: can list all items (cuts through every layer too)                     
 Slice #3: can mark one item done                                                  ← done = demoable!
 ```
 
-`/to-issues` slices the **latter** way. Three rules, that's it:
+`/to-tickets` slices the **latter** way. Three rules, that's it:
 
 - each slice runs **one narrow path from end to end** (touching schema, interface, UI, tests a little);
 - each slice, once done, **can be demoed or verified on its own**;
@@ -39,13 +39,13 @@ Slice #3: can mark one item done                                                
 
 ## Hands-on: slice your PRD
 
-`/to-issues` uses the PRD in the current conversation; you can also hand it the PRD issue number directly.
+`/to-tickets` uses the PRD in the current conversation; you can also hand it the PRD issue number directly.
 
 > 🛠 Try it
 >
-> In the prompt, type (replace `#1` with last chapter's PRD issue number; if you're still in the same session, a bare `/to-issues` works too):
+> In the prompt, type (replace `#1` with last chapter's PRD issue number; if you're still in the same session, a bare `/to-tickets` works too):
 >
-> > `/to-issues #1`
+> > `/to-tickets #1`
 >
 > You should see: Claude read that PRD (maybe scanning the repo for "prefactoring" opportunities), then hand you a **numbered slice list**. Each slice is tagged with:
 >
@@ -55,7 +55,7 @@ Slice #3: can mark one item done                                                
 
 ## It quizzes you back
 
-The slice list isn't filed the moment you've looked at it. `/to-issues` first **asks you a few things** to confirm the slicing is right:
+The slice list isn't filed the moment you've looked at it. `/to-tickets` first **asks you a few things** to confirm the slicing is right:
 
 - Is the granularity right? (too coarse? too fine?)
 - Are the dependencies correct? (who really must wait on whom)
@@ -78,7 +78,7 @@ Once you nod, Claude files each slice as a GitHub issue, **in dependency order**
 | **Acceptance criteria** | a checkbox list, each item verifiable |
 | **Blocked by** | points at the blocking issue, or "None — can start immediately" |
 
-They all get the `ready-for-agent` label (these slices are meant for an AFK agent). `/to-issues` does **not** close or modify the parent PRD issue.
+They all get the `ready-for-agent` label (these slices are meant for an AFK agent). `/to-tickets` does **not** close or modify the parent PRD issue.
 
 > 🛠 Try it
 >
@@ -86,7 +86,7 @@ They all get the `ready-for-agent` label (these slices are meant for an AFK agen
 >
 > You should see: a string of new issues created (numbered on from last chapter's PRD), each referencing the parent PRD, listing acceptance criteria, and tagged with its blocker. Open one — it's specific enough that an agent can start without asking anyone anything.
 
-> 💡 On a real project, there are slices you'll want to **review yourself** rather than hand to an agent — typically the leading slice that establishes the conventions everything else builds on. See [`BOOTSTRAP-CASE-STUDY.en.md`](../../BOOTSTRAP-CASE-STUDY.en.md): that session sliced this book into 11 slices, and **the leading slice was marked "needs a human to review at merge time,"** with the rest handed to agents. You can have `/to-issues` mark it that way too.
+> 💡 On a real project, there are slices you'll want to **review yourself** rather than hand to an agent — typically the leading slice that establishes the conventions everything else builds on. See [`BOOTSTRAP-CASE-STUDY.en.md`](../../BOOTSTRAP-CASE-STUDY.en.md): that session sliced this book into 11 slices, and **the leading slice was marked "needs a human to review at merge time,"** with the rest handed to agents. You can have `/to-tickets` mark it that way too.
 
 ## The whole pipeline, now a closed loop
 
@@ -96,8 +96,8 @@ Step back and look at what these four chapters did:
 fuzzy idea
   → /setup-matt-pocock-skills   (ch 11: lay down the protocol)
   → /grill-with-docs            (ch 12: grill into decisions + CONTEXT.md/ADR)
-  → /to-prd                     (ch 13: synthesize into a PRD issue)
-  → /to-issues                  (ch 14: slice into ready-for-agent issues)
+  → /to-spec                    (ch 13: synthesize into a PRD issue)
+  → /to-tickets                 (ch 14: slice into ready-for-agent issues)
   → a pile of issues an agent can build straight away
 ```
 
@@ -107,7 +107,7 @@ Every step **narrows the degrees of freedom**: idea → decisions → PRD → is
 
 ## Recap
 
-- `/to-issues` slices the PRD into **vertical slices** (end-to-end, demoable on their own), not horizontal by-layer slices.
+- `/to-tickets` slices the PRD into **vertical slices** (end-to-end, demoable on their own), not horizontal by-layer slices.
 - Prefactoring goes first: "make the change easy, then make the easy change."
 - It **quizzes you** on granularity and dependencies, iterating until you're happy, then files issues **in dependency order**.
 - Issue template: Parent / What to build (no file paths) / Acceptance criteria / Blocked by, tagged `ready-for-agent`.
