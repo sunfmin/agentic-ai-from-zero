@@ -149,6 +149,26 @@ _Avoid_: component, service, unit (for module); API, signature (for interface); 
 The throwaway fixture codebase at `tutorial/sample-project/`, shared (language-neutral) by both `zh/` and `en/` chapter 15, deliberately containing a shallow-module deepening opportunity so the reader can run `/improve-codebase-architecture` against real code. Mirrors how `tutorial/skills/` is shared.
 _Avoid_: demo, running project (the running project is Part 1's personal-writing folder — distinct).
 
+### Off-ramp door terms (chapter 16)
+
+Two concept-level doors on the chapter 16 off-ramp introduce these proper nouns (see [ADR-0006](./docs/adr/0006-orca-afk-fleet-doors.md)). The policy mirrors the rest of the glossary: product / command-like names stay English; umbrella concepts gloss on first use. The doors are ordered **orca then afk-fleet** and both sit after the `mattpocock/skills` door.
+
+**orca**:
+Product name (`stablyai/orca`) — a third-party orchestrator (an "agentic development environment") that runs CLI coding agents in parallel, each in its own git worktree. Keep English, lowercase, never translated — like `git`, `gh`, and `mattpocock/skills`. Refer to the repo as `stablyai/orca` on first mention. Distinct from the animal. Frame it per [ADR-0003](./docs/adr/0003-cli-not-desktop-app.md) as a *terminus made of building blocks* (a desktop app whose job is to run the CLI, not replace it) — never as proof the CLI is "more capable" than the desktop app.
+_Avoid_: 虎鲸 / 逆戟鲸 (don't translate the animal); positioning orca as a rival "terminus" to the CLI.
+
+**afk-fleet**:
+Tool / skill name (`sunfmin/afk-fleet`) — an unattended fleet that works a `ready-for-agent` issue backlog on its own, one worktree-isolated worker per issue. Keep English, lowercase, hyphenated, never translated. "AFK" = away-from-keyboard; gloss the expansion once on first use, then keep `afk-fleet` as the canonical form.
+_Avoid_: 挂机舰队, AFK 车队 as the canonical form.
+
+**worktree**:
+git terminology (a `git worktree`: a second working copy of one repo, on its own branch). Keep English to match what git and orca print; gloss on first use (worktree ≈ 独立工作副本 / 隔离工作区), then use English.
+_Avoid_: 工作树 as the canonical form.
+
+**fleet**:
+Umbrella concept: the standing set of parallel workers afk-fleet (or orca) runs. Keep English as the canonical form; gloss on first use (fleet ≈ 一支并行工作的 agent 舰队).
+_Avoid_: 集群, 车队.
+
 ### Payment & access terms
 
 **Claude Pro**:

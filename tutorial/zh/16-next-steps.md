@@ -1,6 +1,6 @@
 # 第 16 章 —— 下一步
 
-_上次校对：2026-05，对齐 Claude Code v2.x_
+_上次校对：2026-07，对齐 Claude Code v2.x_
 
 你已经读完这本书。你会在终端里导航，会跑 Claude Code，会手写一个 `SKILL.md`，会用渐进式展开把它拆成多文件，也会用 `/skill-creator` 通过对话设计新的 skill；进阶篇里，你还用一套专业 skill 跑通了「立协议 → 逼成决策 → 综合 PRD → 切成 issue」这条规划流水线，并对已有代码做过一次架构深化。这本书要教的，到此为止。
 
@@ -29,6 +29,22 @@ _上次校对：2026-05，对齐 Claude Code v2.x_
 - 怎么跟进：仓库 README 里有作者的 newsletter，新 skill 和改动都在那儿发。
 
 本仓库根目录下的 bootstrap case study（[`BOOTSTRAP-CASE-STUDY.md`](../../BOOTSTRAP-CASE-STUDY.md) / [`BOOTSTRAP-CASE-STUDY.en.md`](../../BOOTSTRAP-CASE-STUDY.en.md)）记录了一次从空目录开始、端到端跑完这条流水线的完整 session —— 正是进阶篇那套流程的真实实录。
+
+下面这两扇门，正好接在那条流水线停下的地方。进阶篇把一个模糊的想法变成一份依赖有序的 `ready-for-agent` backlog —— 可是，谁来做这份 backlog、这些 agent 又在哪儿跑？从上往下读：**orca** 是这些 agent 运行所在的并行 worktree 底座，**afk-fleet** 则是在这个底座之上、无人值守地消费这份 backlog 的那支 fleet。
+
+## orca —— 并行跑一队 CLI agent
+
+**orca**（`stablyai/orca`）—— https://github.com/stablyai/orca
+
+- 门后是什么：一个编排器 —— 官方管它叫 ADE（agentic development environment，agent 化开发环境）—— 它把一队（fleet ≈ 一支并行工作的 agent 舰队）CLI 编码 agent（Claude Code 以及其它）同时跑起来，每个都待在自己独立的 git worktree（worktree ≈ 一个仓库的第二份工作副本，各在各的分支上）里，统一在一处（桌面端 + 移动端）追踪。它是个桌面 App，但不是前言里跟"积木"对照的那个"终点站"：它的全部职责，就是把你这本书学会去跑的那些 CLI agent spawn 出来、再协调起来。它是一个由积木搭成的终点站 —— 而这只有在 CLI 可组合的前提下才成立。正因为 Claude Code 是可组合的 CLI，orca 才能把许多个实例扇到各个 worktree 上，再比较、合并出胜出的那一个。这也让它成为本书那条"积木"论点（见下面的"为什么是终端"）最锋利的一个例子。
+- 适合谁：你，当一次只跑一个 Claude Code session 已经不够用的时候 —— 当你想让好几个 agent 在各自隔离的分支上并行跑、又统一盯在一个视图里的时候。
+
+## afk-fleet —— 无人值守地消费一份 backlog
+
+**afk-fleet**（`sunfmin/afk-fleet`）—— https://github.com/sunfmin/afk-fleet
+
+- 门后是什么：一支无人值守的 fleet（AFK = away-from-keyboard，离开键盘）自己把一份 GitHub issue backlog 连着做上好几天。一个很薄的 launcher 每个周期 spawn 一个全新的、用完即弃的 "tick"；每个 tick 给每个 ready 的 issue 派一个 worktree 隔离的 Claude Code worker，拿 CI 给每个把关（对本仓库这样的纯文字仓库，还可以再加一道独立的对抗式验证），把绿的 PR 自动合并，失败的先重试、再升级。它消费的，正是上面 `mattpocock/skills` 那条流程产出的 backlog —— `/grill-with-docs` → `/to-spec` → `/to-tickets` 按依赖顺序发布出来的那批 `ready-for-agent` issue —— 而且它的 worker 就跑在 **orca** 的 worktree 上。这个仓库本身就是那个实例：它的 afk-fleet 每仓配置，以及 [ADR-0006](../../docs/adr/0006-orca-afk-fleet-doors.md)，都是这条循环产出的。
+- 适合谁：你，当你已经把一个项目拆成一批 ready、依赖有序的 `ready-for-agent` issue，又不想守着每一个、只想让它们被实现并合并的时候。
 
 ## Hooks
 
