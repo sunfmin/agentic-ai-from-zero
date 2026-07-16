@@ -2,7 +2,7 @@
 
 _Last calibrated: 2026-05, against Claude Code v2.x_
 
-You've finished the book. You can navigate a terminal, run Claude Code, write a `SKILL.md` by hand, decompose it across files with progressive disclosure, and use `/skill-creator` to design new skills conversationally; and in Part 2 you ran a professional skill set through the "lay down a protocol → grill into decisions → synthesize a PRD → slice into issues" planning pipeline, and deepened the architecture of an existing codebase once. That's everything this book set out to teach.
+You've finished the book. You can navigate a terminal, run Claude Code, write a `SKILL.md` by hand, decompose it across files with progressive disclosure, and use `/skill-creator` to design new skills conversationally; and in Part 2 you ran a professional skill set through the "lay down a protocol → grill into decisions → synthesize a PRD → slice into issues" planning pipeline, and deepened the architecture of an existing codebase once; and in Part 3 you ran that backlog — orchestrating agents across parallel worktrees with orca, then letting an unattended afk-fleet implement and merge it. That's everything this book set out to teach.
 
 This chapter is the **off-ramp**. It does not teach the topics below — every one of them is its own book. The point here is just to tell you what's behind each door, so you can decide which one to open next.
 

@@ -22,4 +22,5 @@ Maintainer dashboard. One row per chapter file. Update this row in the same comm
 | 13-to-spec | 2026-06          | v2.x                | partial (authored; not yet run on a clean Mac) | /to-spec: no interview, seam sketch, 7-section template, ready-for-agent issue |
 | 14-to-tickets | 2026-06       | v2.x                | partial (authored; not yet run on a clean Mac) | /to-tickets: vertical (tracer-bullet) slices, quiz, dependency-ordered publish |
 | 15-improve-architecture | 2026-06 | v2.x            | partial (authored; runs against tutorial/sample-project/) | /improve-codebase-architecture: deep/shallow vocab, HTML report, grilling loop |
+| 16-orchestrate-fleet | 2026-07  | v2.x                | partial (authored; not yet run on a clean Mac — installs orca + authorizes a live fleet) | Part 3 执行篇: orca (parallel worktree agents) + afk-fleet (unattended fleet works the ready-for-agent backlog); --plan first, push+auto-merge-to-main authorization, CI/adversarial gate |
 | 17-next-steps | 2026-05        | v2.x                | n/a (no commands) | Curated outbound links only; renumbered 11 → 16 → 17 |

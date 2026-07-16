@@ -26,6 +26,10 @@
 14. [把 PRD 切成可独立开工的 issue](./14-to-tickets.md)
 15. [把代码深化](./15-improve-architecture.md)
 
+### 执行篇 —— 跑通 backlog
+
+16. [跑通你的 backlog：用 orca 和 afk-fleet 编排 agent](./16-orchestrate-fleet.md)
+
 ### 收尾
 
 17. [下一步](./17-next-steps.md)

@@ -110,4 +110,4 @@ _上次校对：2026-06，对齐 Claude Code v2.x_
 
 ## 下一章
 
-[第 17 章 —— *下一步*](./17-next-steps.md)。进阶篇到此结束。最后一章是整本书的「出口匝道」：告诉你这套套件里 **还没教** 的部分（`/tdd`、`/triage`、`/diagnosing-bugs` 等），以及 hooks、MCP、subagents 这些更大的门，各自后面是什么。
+[第 16 章 —— *跑通你的 backlog：用 orca 和 afk-fleet 编排 agent*](./16-orchestrate-fleet.md)。进阶篇把活规划好了；**执行篇把它跑通**。你手上有一份 `ready-for-agent` 的 issue backlog —— 现在来认识把它并行、无人值守地实现出来的两个工具：orca 和 afk-fleet。

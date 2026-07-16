@@ -26,6 +26,10 @@ The English mirror of a bilingual tutorial that takes a complete CLI beginner (G
 14. [Slice the PRD into Grabbable Issues](./14-to-tickets.md)
 15. [Deepen a Codebase](./15-improve-architecture.md)
 
+### Part 3 — Run the Backlog
+
+16. [Run Your Backlog: Orchestrate Agents with orca and afk-fleet](./16-orchestrate-fleet.md)
+
 ### Wrapping up
 
 17. [Where to Go Next](./17-next-steps.md)

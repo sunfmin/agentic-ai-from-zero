@@ -1,6 +1,6 @@
 # Agentic AI from Zero — Tutorial Context
 
-This repo hosts a bilingual (Chinese / English) tutorial that takes a reader from "never used the command line" to "can write a multi-file Claude Code skill" (Part 1, chapters 0–10), and then onward to "can drive a real project's planning and architecture with a professional skill suite" (Part 2 / 进阶篇, chapters 11–15; see [ADR-0005](./docs/adr/0005-engineering-skills-part.md)). This glossary defines the vocabulary the tutorial uses, so prose and code stay consistent across both languages and all chapters.
+This repo hosts a bilingual (Chinese / English) tutorial that takes a reader from "never used the command line" to "can write a multi-file Claude Code skill" (Part 1, chapters 0–10), and then onward to "can drive a real project's planning and architecture with a professional skill suite" (Part 2 / 进阶篇, chapters 11–15; see [ADR-0005](./docs/adr/0005-engineering-skills-part.md)), and finally to "can run that plan as a fleet of parallel, unattended agents" (Part 3 / 执行篇, chapter 16; see [ADR-0007](./docs/adr/0007-orca-afk-fleet-execution-part.md)). This glossary defines the vocabulary the tutorial uses, so prose and code stay consistent across both languages and all chapters.
 
 ## Language
 
@@ -16,12 +16,16 @@ Specifically: an ex-GUI-AI user being upgraded to CLI. The tutorial's main narra
 ### Tutorial structure
 
 **chapter / 章**:
-One of the 17 numbered units (0 through 16): Part 1 is 0–10, Part 2 / 进阶篇 is 11–15, and the off-ramp (next-steps) is 16. Each chapter is one markdown file under `tutorial/zh/` and a mirror file under `tutorial/en/`. File names are `NN-slug.md` where `NN` is a two-digit number and `slug` is a short English identifier (same slug in both languages).
+One of the 18 numbered units (0 through 17): Part 1 is 0–10, Part 2 / 进阶篇 is 11–15, Part 3 / 执行篇 is 16, and the off-ramp (next-steps) is 17. Each chapter is one markdown file under `tutorial/zh/` and a mirror file under `tutorial/en/`. File names are `NN-slug.md` where `NN` is a two-digit number and `slug` is a short English identifier (same slug in both languages).
 _Avoid_: lesson, section (section means something narrower — a heading within a chapter)
 
 **进阶篇 / Part 2**:
 Chapters 11–15, an explicitly-marked second part that teaches *using* five skills from the `mattpocock/skills` engineering suite as a project-management workflow. It expands the book's destination past Part 1's "write a multi-file skill" ceiling (see [ADR-0005](./docs/adr/0005-engineering-skills-part.md)). The reader does not learn to *build* these skills, only to use them as `/commands`.
 _Avoid_: appendix (it is taught material, not reference), 番外
+
+**执行篇 / Part 3**:
+Chapter 16, a third part that teaches *using* orca and afk-fleet to execute the `ready-for-agent` issue backlog Part 2 produced — running agents in parallel worktrees, then unattended (see [ADR-0007](./docs/adr/0007-orca-afk-fleet-execution-part.md)). Like Part 2, the reader uses these tools, does not build them.
+_Avoid_: appendix, 番外
 
 **section / 节**:
 A heading-level subdivision within a chapter (`##` heading). Not its own file.
@@ -111,7 +115,7 @@ GitHub's official CLI, installed in the sharing chapter (`brew install gh`) and 
 
 ### Engineering-skills terms (进阶篇 / Part 2)
 
-These appear only in chapters 11–16. Most are borrowed engineering vocabulary; the policy mirrors the rest of the glossary — keep command-like and field names English, translate umbrella concepts.
+These appear only in chapters 11–15 and 17. Most are borrowed engineering vocabulary; the policy mirrors the rest of the glossary — keep command-like and field names English, translate umbrella concepts.
 
 **engineering skill suite / 工程 skill 套件**:
 The open-source `mattpocock/skills` set the 进阶篇 teaches *using* (not building). Refer to the repo exactly as `mattpocock/skills`. The suite is installed with `npx skills@latest add mattpocock/skills`.
@@ -148,6 +152,32 @@ _Avoid_: component, service, unit (for module); API, signature (for interface); 
 **sample project / 示例项目**:
 The throwaway fixture codebase at `tutorial/sample-project/`, shared (language-neutral) by both `zh/` and `en/` chapter 15, deliberately containing a shallow-module deepening opportunity so the reader can run `/improve-codebase-architecture` against real code. Mirrors how `tutorial/skills/` is shared.
 _Avoid_: demo, running project (the running project is Part 1's personal-writing folder — distinct).
+
+### Part 3 execution terms (执行篇)
+
+These appear only in chapter 16. Product and tool names stay English (like `git`, `gh`, `mattpocock/skills`); umbrella concepts gloss once on first use.
+
+**orca**:
+Product name (`stablyai/orca`) — a desktop **ADE** that runs coding agents in parallel git worktrees. Keep English, lowercase, never translated; refer to the repo as `stablyai/orca` on first mention. Distinct from the animal. Frame it as an orchestrator built *on* the CLI, never as a "terminus" (see [ADR-0003](./docs/adr/0003-cli-not-desktop-app.md) / [ADR-0007](./docs/adr/0007-orca-afk-fleet-execution-part.md)).
+
+**afk-fleet**:
+Tool / skill name (`sunfmin/afk-fleet`) — the maintainer's own skill, built on orca, that works a backlog unattended. Keep English, lowercase, hyphenated, never translated. "AFK" = away-from-keyboard; gloss the expansion once on first use, keep `afk-fleet` as the canonical form.
+
+**ADE**:
+Agentic development environment — the category orca belongs to (a desktop app for running a fleet of coding agents). Keep the acronym English; gloss once on first use.
+
+**worktree**:
+git terminology (a `git worktree`: a second working copy of one repo on its own branch, in its own folder). Keep English to match what git and orca print; gloss on first use (worktree ≈ 独立工作副本 / 隔离工作区), then use English.
+
+**fleet**:
+Umbrella concept: the standing set of parallel workers afk-fleet runs. Keep English as the canonical form; gloss on first use (fleet ≈ 一支并行工作的 agent 舰队). _Avoid_: 集群, 车队.
+
+**launcher / tick / worker**:
+afk-fleet's three roles. **launcher** = the session `/afk-fleet` runs in; it authorizes once, then loops. **tick** = one fresh, disposable pass the launcher spawns each cycle (dispatch → gate → merge → exit). **worker** = one Claude Code per `ready-for-agent` issue, in its own orca worktree. Keep all three English; gloss on first use.
+
+**backlog**:
+The set of `ready-for-agent` issues Part 2 produces and Part 3 works through. Keep English; gloss on first use (backlog ≈ 待办清单).
+_Avoid_: 积压 (wrong connotation).
 
 ### Payment & access terms
 

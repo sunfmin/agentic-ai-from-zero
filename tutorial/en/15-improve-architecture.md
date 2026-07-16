@@ -111,4 +111,4 @@ When the grilling's done, you have a **thought-through deepening plan** — actu
 
 ## Next
 
-[Chapter 17 — *Where to Go Next*](./17-next-steps.md). Part 2 ends here. The final chapter is the whole book's off-ramp: it tells you what's still **untaught** in this suite (`/tdd`, `/triage`, `/diagnosing-bugs`, and more), and what's behind the bigger doors — hooks, MCP, subagents.
+[Chapter 16 — *Run Your Backlog: Orchestrate Agents with orca and afk-fleet*](./16-orchestrate-fleet.md). Part 2 planned the work; **Part 3 runs it**. You're holding a backlog of `ready-for-agent` issues — now meet the two tools that implement it in parallel and unattended: orca and afk-fleet.
